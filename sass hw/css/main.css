@@ -51,6 +51,13 @@ ul, li {
     padding: 0 10px;
     font-size: 12px; }
 
+span {
+  padding-left: 270px;
+  color: blue;
+  font-size: 25px;
+  font-style: bold;
+  font-weight: 700; }
+
 .slider {
   background-image: url(../img/slider-font.jpg);
   background-repeat: no-repeat;
@@ -85,10 +92,34 @@ ul, li {
   background-color: blue;
   padding: 5px 40px; }
 
-.service_block {
+.service_container {
+  background-color: lightgrey;
   display: flex;
-  width: 100px;
-  height: 100px;
-  background-color: lightblue; }
+  justify-content: center; }
+  .service_container .service_block {
+    color: #fff;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    background-image: url(../img/service_block.jpg); }
+
+.service, .service_text {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 270px;
+  background-color: lightgrey; }
+
+.service {
+  padding-top: 100px;
+  padding-bottom: 25px;
+  color: grey;
+  font-style: bold;
+  font-weight: 600; }
+
+.service_text {
+  font-size: 45px;
+  font-style: bold;
+  font-weight: 600;
+  padding-bottom: 45px; }
 
 /*# sourceMappingURL=main.css.map */
