@@ -1,0 +1,19 @@
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form_user {
+  background-color: green;
+  padding: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+/*# sourceMappingURL=main.css.map */

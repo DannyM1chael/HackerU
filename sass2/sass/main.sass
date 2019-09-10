@@ -1,0 +1,16 @@
+@mixin large-text
+	font-family: Arial
+	font-size: 20px
+	font-weight: bold
+
+.page-title
+	@include large-text
+	padding: 4px
+	margin-top: 10px
+
+@mixin quatroCreate ($size, $color, $padding-left, $padding-right)
+
+.cube
+	@include quatroCreate (100px, blue, 10px, 10px)
+	@include large-text
+	

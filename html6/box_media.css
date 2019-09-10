@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.box-media1 {
+    padding: 10px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    /* transform: rotate(30deg); */
+    width: 200px;
+    height: 130px;
+    margin-right: 10px;
+}
+
+.bounce {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    transition-duration: 1s;
+}
+
+.bounce:hover {
+    width: 300px;
+}
+
+.simple-box {
+    width: 200px;
+    height: 130px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+
+@keyframes shake {
+    0% { left: 0;}
+    20% { left: -2%;}
+    40% { left: 2%;}
+    60% { left: -2%;}
+    80% { left: 2%;}
+    100% { left: 0;}
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}

@@ -1,0 +1,10 @@
+.allposts{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: 2px 2px auto;
+    flex-flow: nowrap;
+    background-color: azure;
+    font-style: italic;
+    font-weight: bold;
+}

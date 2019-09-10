@@ -1,0 +1,30 @@
+.myLovelyButton {
+  padding: 10px;
+  margin: 10px;
+  background-color: pink;
+  cursor: pointer;
+  outline: 0 solid black;
+  transition: outline 0.5s ease; }
+  .myLovelyButton:hover {
+    outline: 2px solid black; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #0dde98; }
+  .container div {
+    width: 100px;
+    height: 100px;
+    padding: 10px 30px;
+    display: inline-block;
+    background-color: blue; }
+    .container div:hover {
+      outline: 2px solid black; }
+
+.inform {
+  font-size: 24px; }
+
+.hideInform {
+  color: blue; }
+
+/*# sourceMappingURL=main.css.map */

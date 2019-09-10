@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACN,SAAS,EAAE,IAAI",
+"sources": ["../sass/inform.sass"],
+"names": [],
+"file": "inform.css"
+}

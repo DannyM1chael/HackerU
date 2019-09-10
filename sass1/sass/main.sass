@@ -1,0 +1,31 @@
+$mainColor: #0dde98
+$SQSize: 100px
+
+%btn
+	padding: 10px
+	margin: 10px
+	background-color: pink
+	cursor: pointer
+	outline: 0 solid black
+	transition: outline .5s ease
+	&:hover
+		outline: 2px solid black
+
+.myLovelyButton
+	@extend %btn
+
+.container
+	width: 100%
+	height: 100vh
+	background-color: $mainColor
+	div
+		width: $SQSize
+		height: $SQSize
+		padding: 10px 30px
+		display: inline-block
+		background-color: blue
+		&:hover
+			outline: 2px solid black
+
+@import "inform"
+@import "hideinform"

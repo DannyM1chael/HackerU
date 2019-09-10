@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Navigation Menu</title>
+    <style>
+      .menu {
+        font-size: 20px;
+        background-color: cadetblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 5px;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+        transition-duration: 1s;
+      }
+    
+      
+    </style>
+</head>
+<body>
+  <div class="menu">
+  <nav>
+    <ul>
+      <a href="#">
+        <li>О компании</li>
+      </a>
+      <a href="#">
+        <li>Миссия</li>
+      </a>
+      <a href="#">
+        <li>Руководство</li>
+      </a>
+      <a href="#">
+        <li>Проекты</li>
+      </a>
+      <a href="#">
+        <li>Контакты</li>
+      </a>
+    </ul>
+  </nav>
+  </div>
+<script>
+ function changeSize(className) {
+     var elements = document.getElementsByClassName(className)
+     for (let i = 0; i < elements.length; i++) {
+       let Size = Math.random()*15;
+       elements[i].style.fontSize= `${Size}px`;
+     }
+     }
+     setInterval(function(){changeSize('menu')}, 1000)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blocks</title>
+        <link rel="stylesheet" href="blocks.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+    <br>
+    <h1>Blocks</h1>
+    <br>
+    <h2>Если элемент является строчным или строчно-блочным или еще каким-то строчно...(display-inline)</h2>
+    <section class="s1">
+        <header>This text is centered</header>
+        <nav role="navigation">
+        <a href="#0">One</a>
+        <a href="#0">Two</a>
+        <a href="#0">Three</a>
+        <a href="#0">Four</a>
+        </nav>
+    </section>
+    <br>
+    <h2>Если элемент является блочным (display:block)</h2>
+    <section class="s2">
+        <div class="center_block">
+        Block in the center of page
+        </div>
+    </section>
+    <br>
+    <h2>Если элемент является блочным (display:block) и несколько элементов</h2>
+    <section class="s3">
+        <h3>Способ через строчно-блочные элементы</h3>
+        <div class="center_inline_block">
+            <div>Магазины Duty Free расположены в зоне вылета международных рейсов.</div>
+            <div>Аптека расположена на втором этаже аэровокзального комплекса.</div>
+            <div>Block 3</div>
+        </div>
+        <h3>Способ через flex</h3>
+        <div class="center_flex">
+            <div>Магазины Duty Free расположены в зоне вылета международных рейсов.</div>
+            <div>Аптека расположена на втором этаже аэровокзального комплекса.</div>
+            <div>Block 3</div>
+        </div>
+    </section>
+    <br>
+    <h2>Центрирование по вертикали</h2>
+    <h3>Если элемент срочный или строчно-блочный (или другой строчно-...) (display:inline...)</h3>
+    <h4>Вариант через просто padding-top и padding-bottom</h4>
+    <section class="s4">
+        <div class="center_inline_block">
+            <a href="#0">We' re</a>
+            <a href="#0">centered</a>
+            <a href="#0">Bits of</a>
+            <a href="#0">Text</a>
+        </div>
+        </section>
+        <br>
+    <h4>Вариант через просто line-height</h4>
+    <section class="s4">
+        <div class="center_inline_block2">
+            Текст (или строчно-блочный элемент)отцентрированный по середине (по высоте)
+        </div>
+    </section>
+    <br>
+    <h2>Если элемент блочный (display:block)</h2>
+    <h3>Нюанс - Если известна высота элемента</h3>
+    <section class="s5">
+        <div class="center_block">
+            <div>
+        Книжные магазины и газетные киоски расположены на втором этаже пассажирского терминала и в зонах вылета международных и внутренних рейсов.
+            </div>
+        </div>
+    </section>
+    <h2>Если неизвестна высота элемента</h2>
+    <section class="s6">
+        <div class="center_block">
+            <div>
+        Книжные магазины и газетные киоски расположены на втором этаже пассажирского терминала и в зонах вылета международных и внутренних рейсов.
+            </div>
+            </div>
+    </section>
+    <br>
+    <h2>Выравнивание через flex</h2>
+    <section class="s7_flex">
+            <a href="#0">We' re</a>
+            <a href="#0">centered</a>
+            <a href="#0">Bits of</a>
+            <a href="#0">Text</a>
+    </section>
+    <br><br><br><br><br>
+    </body>
+</html>

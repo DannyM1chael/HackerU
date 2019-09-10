@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box; }
+
+.contacts {
+  display: inline-block;
+  text-decoration: none;
+  float: right; }
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+.slider {
+  background-image: url(../slider-font.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/*# sourceMappingURL=main.css.map */
