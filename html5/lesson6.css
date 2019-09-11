@@ -1,9 +1,0 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-.menu {
-    font-family: 'Roboto', sans-serif;
-}
-

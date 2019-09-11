@@ -122,4 +122,15 @@ span {
   font-weight: 600;
   padding-bottom: 45px; }
 
+.about {
+  display: flex;
+  justify-content: center; }
+  .about .about_us p {
+    width: 300px; }
+  .about .about_block {
+    margin: 10px;
+    width: 180px;
+    height: 180px;
+    background-color: lightgrey; }
+
 /*# sourceMappingURL=main.css.map */
