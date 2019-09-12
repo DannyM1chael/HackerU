@@ -1,0 +1,70 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #342022; }
+  a:hover {
+    color: lightblue;
+    text-decoration: underline; }
+
+.header-info {
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: #342022; }
+  .header-info div {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    cursor: pointer; }
+    .header-info div:hover {
+      color: lightblue; }
+
+.user-account:before {
+  content: "";
+  font-family: "icomoon"; }
+
+.promo {
+  padding-left: 94px; }
+
+.city {
+  padding-right: 75px;
+  padding-left: 75px; }
+
+.logo {
+  padding-left: 20px; }
+
+.menu-inner {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 25px 25px;
+  cursor: pointer;
+  font-weight: bold; }
+
+section {
+  background-color: #f2ede9; }
+
+.content {
+  display: flex; }
+
+.menu_description {
+  width: 700px;
+  height: 390px; }
+  .menu_description h2 {
+    font-size: 45px;
+    padding: 70px 250px 0 80px; }
+    .menu_description h2 .colortext {
+      color: lightblue; }
+  .menu_description p {
+    padding: 70px 250px 0 80px;
+    font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */
