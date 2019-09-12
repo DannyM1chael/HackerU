@@ -132,5 +132,10 @@ span {
     width: 180px;
     height: 180px;
     background-color: lightgrey; }
+    .about .about_block:hover {
+      background-color: lightblue; }
+
+.clients, .feedback-text {
+  background-color: lightgrey; }
 
 /*# sourceMappingURL=main.css.map */
