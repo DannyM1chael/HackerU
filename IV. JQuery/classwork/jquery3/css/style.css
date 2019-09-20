@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: space-between; }
+  ul li {
+    display: block;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease; }
+  ul .activeBtn {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black; }
+
+.result {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 10px;
+  height: 500px;
+  border: 2px solid black;
+  background-size: cover;
+  background-position: center;
+  color: white; }
+
+.blog .addContent {
+  width: 86%;
+  padding: 2vw 2%;
+  background-color: lightblue;
+  margin: 30px auto;
+  color: darkblue; }
+  .blog .addContent textarea {
+    width: 100%;
+    min-height: 100px; }
+  .blog .addContent .addBtn {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: #72bcd4;
+    display: inline-block;
+    cursor: pointer; }
+.blog .posts {
+  min-height: 500px; }
+
+/*# sourceMappingURL=style.css.map */
