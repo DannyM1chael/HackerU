@@ -1,10 +1,16 @@
+*{
+	box-sizing: border-box;
+}
+
 .allposts{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin: 2px 2px auto;
-    flex-flow: nowrap;
+	display: flex;
+	justify-content: space-between;
+	flex-basis: auto;
+	flex-wrap: wrap;
     background-color: azure;
     font-style: italic;
-    font-weight: bold;
+}
+
+.postElem{
+	width: 30%;
 }

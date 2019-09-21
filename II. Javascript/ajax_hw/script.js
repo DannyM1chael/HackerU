@@ -29,8 +29,8 @@ function AJAXHandler(jsonData){
     var postElem = document.createElement('div');
     postElem.classList.add('postElem')
 
-    var titleElem = document.createElement('title');
-    var bodyElem = document.createElement('body');
+    var titleElem = document.createElement('h3');
+    var bodyElem = document.createElement('p');
 
     titleElem.innerText = jsonData[i]["title"];
     bodyElem.innerText = jsonData[i]["body"];
@@ -44,7 +44,6 @@ function AJAXHandler(jsonData){
 function AJAXHandlerUser(jsonData) {
     userDataElem = document.getElementsByClassName('.userData');
     userDataElem.innerHTML = "";
-
 }
 
 function buttonHandler(){
