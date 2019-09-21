@@ -4,24 +4,26 @@
   padding: 0; }
 
 .main_content {
-  display: flex;
-  justify-content: center;
-  width: 480px;
-  height: 480px;
+  width: 50%;
+  height: 400px;
+  margin: 30px auto;
   background-image: url(https://polit.ru/media/photolib/2015/03/21/ps_raccoon.jpg);
-  background-image: cover;
-  background-position: center; }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 ul {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 50%;
+  margin: 30px auto; }
   ul li {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     list-style: none;
     background-position: center;
-    box-shadow: 5px 5px 10px black;
-    cursor: pointer;
-    margin: 20px auto; }
+    background-size: cover;
+    box-shadow: 0 10px 10px 0 grey;
+    cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
