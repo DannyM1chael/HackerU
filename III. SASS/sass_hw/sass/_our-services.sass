@@ -1,14 +1,42 @@
-.our-services
+section
 	background: #EBEBEB
-	.our-services_item
+	padding-top: 5%
+	padding-bottom: 5%
+
+	.our-services_content
 		display: flex
-		justify-content: center
-		li
-			width: 350px
-			height: 350px
-			background-image: url('../img/our_services.jpg')
-			background-size: cover
-			background-position: center
-			margin: 15px
-			list-style: none
-	
+		flex-direction: column
+		margin-right: 10%
+		margin-left: 10%
+		h3
+			color: #BDBDBD
+			margin-bottom: 2%
+		h2
+			font-style: normal
+			font-weight: 900
+			font-size: 48px
+			line-height: 69px
+			margin-bottom: 2%
+
+		.our-services
+			display: flex
+			flex-wrap: wrap
+
+			.our-services_item
+				display: flex
+				width: 30%
+				height: 300px
+				justify-content: center
+				align-items: flex-end
+				margin: 15px
+				background-image: url('../img/our_services.jpg')
+				background-size: cover
+				background-position: center
+				cursor: pointer
+				span
+					width: 50%
+					color: #FFFFFF
+					font-size: 24px
+					padding-bottom: 5%
+					&:hover
+						background-color: rgba(0, 95, 163, 0.65)
