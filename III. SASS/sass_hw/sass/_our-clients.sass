@@ -1,6 +1,8 @@
 .our-clients
 	background: #EBEBEB
 	.our-clients_content
+		display: flex
+		flex-direction: column
 		margin-right: 10%
 		margin-left: 10%
 		padding-top: 5%
@@ -9,6 +11,22 @@
 			font-size: 24px
 			line-height: 33px
 			color: #BDBDBD
+			margin-bottom: 5%
 		h2
 			font-size: 48px
 			line-height: 69px
+			margin-bottom: 5%
+		.clients-logo
+			display: flex
+			justify-content: space-between
+			margin-bottom: 5%
+			img
+				width: 15%
+			
+		.controls
+			display: flex
+			align-items: center
+			.slider_btn-next,.slider_btn-prev
+				display: flex
+				justify-content: center
+				align-items: center

@@ -113,6 +113,8 @@ section {
 .our-clients {
   background: #EBEBEB; }
   .our-clients .our-clients_content {
+    display: flex;
+    flex-direction: column;
     margin-right: 10%;
     margin-left: 10%;
     padding-top: 5%;
@@ -120,25 +122,92 @@ section {
     .our-clients .our-clients_content h3 {
       font-size: 24px;
       line-height: 33px;
-      color: #BDBDBD; }
+      color: #BDBDBD;
+      margin-bottom: 5%; }
     .our-clients .our-clients_content h2 {
       font-size: 48px;
-      line-height: 69px; }
+      line-height: 69px;
+      margin-bottom: 5%; }
+    .our-clients .our-clients_content .clients-logo {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5%; }
+      .our-clients .our-clients_content .clients-logo img {
+        width: 15%; }
+    .our-clients .our-clients_content .controls {
+      display: flex;
+      align-items: center; }
+      .our-clients .our-clients_content .controls .slider_btn-next, .our-clients .our-clients_content .controls .slider_btn-prev {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
 
-.reviews p {
-  background: #EBEBEB; }
+.reviews {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+  .reviews h3 {
+    font-size: 24px;
+    line-height: 33px;
+    color: #BDBDBD;
+    margin-bottom: 5%; }
+  .reviews h2 {
+    font-size: 48px;
+    line-height: 69px;
+    margin-bottom: 5%; }
+  .reviews p {
+    background: #EBEBEB;
+    margin: 0% 20% 0 20%; }
+  .reviews .reviews-image {
+    margin: 1% 20% 1% 20%;
+    width: 50%; }
+    .reviews .reviews-image p {
+      background: #FFFFFF;
+      margin: 0; }
+    .reviews .reviews-image img {
+      width: 15%;
+      border-radius: 50%;
+      background: #FFFFFF; }
+  .reviews .controls {
+    display: flex;
+    align-items: center; }
+    .reviews .controls .slider_btn-next, .reviews .controls .slider_btn-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .reviews .controls .slider_controls {
+      background: rgba(128, 128, 128, 0.7); }
 
 .contact {
   display: flex;
   background-image: url("../img/first_screen.jpg");
   background-size: cover;
-  height: 620px; }
-  .contact li {
-    list-style: none; }
-
-input, textarea {
-  background-color: transparent;
-  border: none; }
+  height: 420px; }
+  .contact .contact-content {
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    .contact .contact-content h2 {
+      font-size: 24px;
+      line-height: 69px;
+      margin-bottom: 5%; }
+    .contact .contact-content p {
+      color: #FFFFFF;
+      margin-bottom: 5%; }
+    .contact .contact-content li {
+      list-style: none;
+      color: #FFFFFF; }
+  .contact form {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: #FFFFFF; }
+    .contact form input, .contact form textarea {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.7); }
 
 .abous-us {
   display: flex;
@@ -153,14 +222,20 @@ input, textarea {
     width: 50%; }
     .abous-us .about-us_content h3 {
       color: #BDBDBD; }
-    .abous-us .about-us_content span {
-      color: blue; }
+    .abous-us .about-us_content h2 {
+      font-size: 48px;
+      line-height: 69px; }
+      .abous-us .about-us_content h2 span {
+        color: blue; }
   .abous-us .about-us_block {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: flex-end; }
     .abous-us .about-us_block .about-us_item {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-direction: column;
       background: #EBEBEB;
       margin: 15px;
       width: 255px;
@@ -171,9 +246,10 @@ input, textarea {
 
 .footer {
   display: flex;
-  justify-content: space-around; }
-  .footer li {
-    list-style: none;
+  justify-content: space-around;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+  .footer div {
     font-family: "Lato", sans-serif; }
 
 #icon-mobile, #icon-clock-o, #icon-envelope-o, #icon-map-marker {
@@ -203,7 +279,7 @@ input, textarea {
 h2, h1 {
   font-family: "Merriweather", serif; }
 
-p, .btn, .our-services_item li {
+p, .btn, .our-services_item li, input, textarea {
   font-family: "Lato", sans-serif; }
 
 .btn {
