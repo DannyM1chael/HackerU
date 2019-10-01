@@ -11,7 +11,8 @@ h2 {
   width: 400px;
   border: 2px solid black;
   border-radius: 5px;
-  padding: 10px; }
+  padding: 10px;
+  margin: 20px; }
   .container .header, .container .content {
     display: flex;
     justify-content: space-between;
@@ -31,5 +32,12 @@ h2 {
     border-radius: 5px;
     margin: 10px;
     padding: 5px; }
+
+.deal {
+  height: 100px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px; }
 
 /*# sourceMappingURL=style.css.map */
