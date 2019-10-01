@@ -16,7 +16,7 @@ $(document).ready(function() {
 		});
 
 		curDeal.find('.confirm').on('click', function(){
-			$(this).parent('.deal').css('background-color', 'green')
+			$(this).parent('.deal').css('background-color', 'lightgreen')
 		});
 
 	})
