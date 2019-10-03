@@ -2,54 +2,49 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="site_mikhalev.css">
+        <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width">
         <title>Appetit Card</title>
     </head>
     <body>
-        <section class="top_nav">
+<!--         <section class="top_nav">
             <div>
                 <nav class="menu-opener">
-                        <div class="menu-opener-inner"></div>
-                    </nav>
-
-                    <nav class="menu">
-                        <ul class="menu-inner">
-                            <a href="#" class="menu-link">
-                                <li>Restaurants by city</li>
-                            </a>
-                            <a href="#" class="menu-link">
-                                <li>Restaurants by name</li>
-                            </a>
-                            <a href="#" class="menu-link">
-                                <li>About us</li>
-                            </a>
-                            <a href="#" class="menu-link">
-                                <li>How can we help?</li>
-                            </a>
-                            <a href="#" class="menu-link">
-                                <li>Get started</li>
-                            </a>
-                            <a href="#" class="menu-link">
-                                <li>Stay involved</li>
-                            </a>
-                        </ul>
-                    </nav>
+                    <div class="menu-opener-inner"></div>
+                </nav>
+                <nav class="menu">
+                    <ul class="menu-inner">
+                        <li>
+                            <a href="#" class="menu-link">Restaurants by city</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link">Restaurants by name</a>
+                        </li>                    
+                        <li>
+                            <a href="#" class="menu-link">About us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link">How can we help?</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link">Get started</a>
+                        </li>
+                        <li><a href="#" class="menu-link">Stay involved</a>
+                        </li>   
+                    </ul>
+                </nav>
             </div>
-        </section>
+        </section> -->
         <section class="font_banner">
-            <div>
-                <div class="logo">
-                    <span>Appetit</span>
-                    <span>Card</span>
-                </div>
-                    <button class="btn">Get your card</button>
+            <div class="logo">
+                <p>Appetit<span>Card</span></p>
+                <button class="btn">Get your card</button>
             </div>
-            <h1 class="font_banner__title">Dine Smarter. Save Money</h1>
-            <div class="font_banner__sticker"><span class="banner__sticker-sum">$72</span><span class="banner__sticker-txt">per year</span></div>
-                <h4 class="font_banner__subtitle">Get an official 50% discount in 3400 Restaurants and Cafe Across Germany. 
-                    It's easy as never before - just $72 per year</h4>
+            <div class="font_content">
+                <h1>Dine Smarter. Save Money</h1>
+                <div class="font_banner__sticker"><span class="banner__sticker-sum">$72</span><span class="banner__sticker-txt">per year</span>
+                </div>
+                <h4>Get an official 50% discount in 3400 Restaurants and Cafe Across Germany. It's easy as never before - just $72 per year</h4>
                 <div class="search-form">
                     <form action="" class="search_form">
                         <input class="search_form__input" type="text" class="font_banner-input">
@@ -57,6 +52,7 @@
                         <button class="search_form__btn">Search</button>
                     </form>
                 </div>
+            </div>
         </section>
         <div class="page_container">
             <section class="partners">
@@ -205,20 +201,5 @@
                 </div>
         </footer>
     </body>
-    <script>
-        function toggle() {
-            if (document.querySelector(".menu-opener").classList.contains('active')) {
-                document.querySelector(".menu-opener-inner").classList.remove('active');
-                document.querySelector(".menu-opener").classList.remove('active');
-                document.querySelector(".menu").classList.remove('active');
-            } else {
-                document.querySelector(".menu-opener-inner").classList.add('active');
-                document.querySelector(".menu-opener").classList.add('active');
-                document.querySelector(".menu").classList.add('active');
-            }
-        }
-
-        document.querySelector(".menu-opener").onclick = toggle;
-        // 
-    </script>
+    <!-- <script src="script/script.js"></script> -->
 </html>
