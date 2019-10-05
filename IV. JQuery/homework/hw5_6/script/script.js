@@ -30,15 +30,15 @@ function singleDataHadler(data){
 function dataHadler(data){
 	$('.container').html('');
 	data.forEach(function(element, index){
-	var newDoHtml = [ 
-					`<div class='do-content'>`,
-						`<p>${data.id}</p>`,
-						`<h2>${data.title}</h2>`,
-						`<p>${data.completed}</p>`,
-					`</div>`
-					].join('');
+		var newDoHtml = [ 
+						`<div class='do-content'>`,
+							`<span>${index}</span>`,
+							`<h2>${element.title}</h2>`,
+							`<p>${element.completed}</p>`,
+						`</div>`
+						].join('');
 
-	$('.container').append(newDoHtml);	
+		$('.container').append(newDoHtml);	
 
 	});
 
