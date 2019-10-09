@@ -22,7 +22,7 @@ $(document).ready(function() {
 function singleDataHandler(data){
 	var newDoHtml = [ 
 					`<div class='do-content'>`,
-						`<p>${data.id}</p>`,
+						`<span>${data.id}</span>`,
 						`<h2>${data.title}</h2>`,
 						`<p>${data.completed}</p>`,
 					`</div>`
@@ -60,13 +60,39 @@ function successHandler(data, textStatus){
 }
 
 //функция при ошибке
-function errorHandler(data, textStatus){
-	alert('Такого id нет');				
+function errorHandler(data){
+	var modalHtml = [ 
+					`<div class='modal'>`,
+						`<div>`,
+						`<p>Такого id нет!</p>`,
+						`</div>`,
+						`<button id='backBtn'>Назад</button>`,
+					`</div>`
+					].join('');
+	$('.modalWindow').html(modalHtml);
+	$('.modalWindow').css('display', 'flex');
+	$('#backBtn').click(function(){
+		$('.modalWindow').hide();
+	});
+
+
 }
 // функция при загрузке
 function beforeSendHandler() {
-	$('.loadingWindow h1').show().animate({'width' : '100%'}, 500);
-	$('.loadingWindow h1').show().animate({'width' : '0%'}, 500);
+	var modalHtml = [ 
+					`<div class='modal'>`,
+						`<div>`,
+						`<p>Loading<span id='load'>...</span></p>`,
+						`</div>`,
+					`</div>`
+					].join('');
+	$('.modalWindow').html(modalHtml);
+	$('.modalWindow').css('display', 'flex');
+	$('#load').stop(true).animate({ 'width': '100%' }, 500);
+	$('#load').stop(true).animate({ 'width': '0%' }, 500);
+	$('#load').ready(function(){
+		$('.modalWindow').hide();
+	});
 
 }
 // функция при выполнении запроса
