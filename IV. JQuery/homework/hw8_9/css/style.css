@@ -1,0 +1,122 @@
+html {
+  height: 100%; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  height: 100%;
+  font-family: tahoma;
+  line-height: 1.7;
+  perspective-origin: 0% 50%;
+  perspective: 800px;
+  background: #21212d; }
+  body main {
+    transition: transform 150ms ease-out;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../img/volcano.jpg");
+    transform-origin: 0% 50%;
+    background-size: cover; }
+    body main:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to right, transparent, rgba(33, 33, 45, 0.5));
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 150ms ease-out, visibility 0s 150ms; }
+    body main .menu-active {
+      border-radius: 0.001px;
+      transform: translateX(16em) rotateY(15deg); }
+      body main .menu-active:after {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 150ms ease-out, visibility 0s; }
+    body main .menu-hover {
+      border-radius: 0.001px;
+      transform: translateX(1em) rotateY(1deg); }
+    body main section {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 1em 4em;
+      max-width: 680px;
+      overflow: auto;
+      background-color: rgba(255, 255, 255, 0.5); }
+      body main section h1 {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 2em; }
+      body main section p {
+        display: inline-block; }
+  body nav {
+    transition: transform 150ms ease-out;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16em;
+    background-color: #353441;
+    transform: translateX(-16em); }
+    body nav .menu-active {
+      transform: translateX(0); }
+    body nav menu-hover {
+      transform: translateX(-15em); }
+    body nav h1 {
+      z-index: 100;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -65px;
+      height: 60px;
+      width: 65px;
+      line-height: 60px;
+      font-size: 0.8em;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #353441;
+      cursor: pointer; }
+      body nav h1:hover {
+        color: #353441;
+        background: white; }
+      body nav h1 ul {
+        padding: 0;
+        margin: 0; }
+      body nav h1 li {
+        display: inline-block;
+        padding: 0 1em;
+        width: 100%;
+        height: 60px;
+        color: #9dc6d1;
+        line-height: 60px;
+        background-color: #353441;
+        transition: all 0.5s ease-in; }
+        body nav h1 li:nth-of-type(2n) {
+          background-color: #3a3947; }
+        body nav h1 li:hover {
+          background: orangered;
+          color: white; }
+
+/*# sourceMappingURL=style.css.map */
