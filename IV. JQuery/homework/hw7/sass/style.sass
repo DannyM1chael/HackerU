@@ -12,12 +12,13 @@ body
 .cards-wrapper
 	margin-top: 50px
 	.card-container
-		perspective: 1200px
 		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
 		.card
-			margin: 0 auto
-			height: 500px
-			width: 500px
+			margin: 10px
+			height: 250px
+			width: 20%
 			position: relative
 			transition: all 1s ease
 			transform-style: preserve-3d
@@ -50,14 +51,12 @@ body
 					transform: translateZ(100px) scale(0.98)
 					perspective: inherit
 			.card-front
-				background-image: url('../img/france.jpg')
 				background-size: cover
 				background-position: center
 				transform-style: preserve-3d
 				cursor: pointer
 			.card-back
 				transform: rotateY(180deg)
-				background-image: url('../img/paris.jpg')
 				background-size: cover
 				background-position: center
 				transform-style: preserve-3d
