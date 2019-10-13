@@ -23,36 +23,20 @@ var sightArr = [
 
 $(document).ready(function(){
 	var cardElem = $('.card');
-	var isFlip = false;
 
 	cardElem.on('click', function(){
-		flip();
+		$(this).toggleClass('rotated');
 		
 	}); 
 
-	cardElem.on('click', function(){
-		flipOut();
-		
+	cardFrontElem = cardElem.find('.card-front');
+	flagArr.forEach(function(){
+		cardFrontElem.css('background-image', `url(${flagArr[0]})`);
 	}); 
-
-	function flip(){
-		if (isFlip) return null;
-		cardElem.addClass('rotated');
-	};	console.log(`flip:${isFlip}`);
-
-	function flipOut(){	
-		if (!isFlip) return null;
-		cardElem.removeClass('rotated');
-	};  console.log(`flipOut:${isFlip}`);
-
-	cardFront = cardElem.find('.card-front');
-	flagArr.forEach(function(element,index){
-		cardFront.css('background-image', `url(${flagArr[index]})`);
-	});
 
 	cardBack =  cardElem.find('.card-back');
-	sightArr.forEach(function(element,index){
-		cardBack.css('background-image', `url(${sightArr[index]})`);
+	sightArr.forEach(function(){
+		cardBack.css('background-image', `url(${sightArr[0]})`);
 	});
 
 })
