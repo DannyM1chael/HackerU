@@ -29,14 +29,14 @@ $(document).ready(function(){
 		
 	}); 
 
-	cardFrontElem = cardElem.find('.card-front');
-	flagArr.forEach(function(){
-		cardFrontElem.css('background-image', `url(${flagArr[0]})`);
-	}); 
+	cardFront = cardElem.find('.card-front');
+	cardFront.each(function(index){
+		cardFront.eq(index).css('background-image', `url(${flagArr[index]})`);
+	});
 
 	cardBack =  cardElem.find('.card-back');
-	sightArr.forEach(function(){
-		cardBack.css('background-image', `url(${sightArr[0]})`);
+	cardBack.each(function(index){
+		cardBack.eq(index).css('background-image', `url(${sightArr[index]})`);
 	});
 
 })
