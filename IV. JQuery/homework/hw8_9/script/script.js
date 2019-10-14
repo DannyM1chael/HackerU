@@ -1,25 +1,22 @@
-$(document).ready(function(){
+$(document).ready(function() {
+	var burgerMenu = $('.burgermenu');
+	var navMenu = $('.links');
 
-	var nav  = $('nav');
-	var menu = $('nav h1');
-	var main = $('main');
-	open = false;
+	burgerMenu.on('click', function(){
+		navMenu.toggleClass('links-active');
 
-	menu.on('click', function(){
-		openmenu = (!open) ? true: false;
-		nav.toggleClass('menu-active');
-		main.toggleClass('menu-active');
-		nav.removeClass('menu-hover');
-		main.removeClass('menu-hover');
-	});
+	})
 
-	menu.hover(function(){
-		if(!open){
-			nav.addClass('menu-hover');
-			main.addClass('menu-hover');
-		}else{
-			nav.removeClass('menu-hover');
-			main.removeClass('menu-hover');
-		};
-	});
+	burgerMenu.find('div .line1').on('click',function(){
+		$(this).toggleClass('toggle');
+
+	})
+
+	navMenu.find('li').on('click', function(){
+		scrollHandler($(this));
+	})
+
+	function scrollHandler(obj){
+		$('html').animate({scrollTop:$('.page4').eq(obj.index()).offset().top})};
+
 })
