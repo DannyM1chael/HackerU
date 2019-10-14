@@ -4,10 +4,9 @@ $(document).ready(function(){
 	var menu = $('nav h1');
 	var main = $('main');
 	open = false;
-	hover = false;
 
 	menu.on('click', function(){
-		openmenu = !open ? true: false;
+		openmenu = (!open) ? true: false;
 		nav.toggleClass('menu-active');
 		main.toggleClass('menu-active');
 		nav.removeClass('menu-hover');
@@ -22,4 +21,5 @@ $(document).ready(function(){
 			nav.removeClass('menu-hover');
 			main.removeClass('menu-hover');
 		};
+	});
 })

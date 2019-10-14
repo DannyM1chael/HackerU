@@ -1,24 +1,24 @@
 
 var flagArr  = [
-				'img/france.jpg',
-				'img/iceland.jpg',
-				'img/israel.jpg',
-				'img/nepal.jpg',
-				'img/netherlands.jpg',
-				'img/portugal.jpg',
-				'img/russia.jpg',
-				'img/vietnam.jpg'
+				'https://wallpapercave.com/wp/N9drw3k.jpg',
+				'https://wallpapercave.com/wp/wp4211279.jpg',
+				'https://wallpapercave.com/wp/wp2362739.jpg',
+				'https://wallpapercave.com/wp/wp4034159.jpg',
+				'https://wallpapercave.com/wp/wp4213327.jpg',
+				'https://wallpapercave.com/wp/wp1958683.jpg',
+				'https://wallpapercave.com/wp/wp1903233.jpg',
+				'https://wallpapercave.com/wp/wp4216160.jpg'
 				];
 
 var sightArr = [
-				'img/paris.jpg',
-				'img/volcano.jpg',
-				'img/jerusalim.jpg',
-				'img/everest.jpg',
-				'img/tulips.jpg',
-				'img/pena.jpg',
-				'img/moscow.jpg',
-				'img/halong.jpg'
+				'https://wallpapercave.com/wp/wp2530917.jpg',
+				'https://wallpapercave.com/wp/wp4098813.jpg',
+				'https://wallpapercave.com/wp/wp1833702.jpg',
+				'https://wallpapercave.com/wp/qfuxkVz.jpg',
+				'https://wallpapercave.com/wp/wp1839886.jpg',
+				'https://wallpapercave.com/wp/wp2242975.jpg',
+				'https://wallpapercave.com/wp/wp3988257.jpg',
+				'https://wallpapercave.com/wp/wp1835743.jpg'
 				];
 
 $(document).ready(function(){
@@ -26,6 +26,7 @@ $(document).ready(function(){
 
 	cardElem.on('click', function(){
 		$(this).toggleClass('rotated');
+		$(this).siblings().removeClass('rotated');
 		
 	}); 
 
