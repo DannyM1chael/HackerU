@@ -6,13 +6,6 @@
 body
 	font-family: 'Poppins', sans-serif
 	overflow-x: hidden
-	.logo
-		text-transform: uppercase
-		font-weight: bold
-		color: white
-		letter-spacing: 3px
-		font-size: 25px
-		margin-left: 5%
 	.page1
 		background-image: url('../img/volcano.jpg')
 		background-size: cover
@@ -42,6 +35,14 @@ nav
 	width: 100%
 	background-color: rgba(72, 84, 96,0.5)
 
+	.logo
+		text-transform: uppercase
+		font-weight: bold
+		color: white
+		letter-spacing: 3px
+		font-size: 25px
+		margin-left: 5%
+
 	.burgermenu
 		margin-right: 9%
 		div
@@ -51,44 +52,38 @@ nav
 			background-color: white
 			margin: 5px
 			cursor: pointer
-		.line1
-			.toggle
-				transform: rotate(-45deg), translate(-5px,6px)
-		.line2
-			.toggle
-				opacity: 0
-		.line3
-			.toggle
-				transform: rotate(45deg), translate(-5px,-6px)					
-		.links
-			display: flex
-			flex-direction: column
-			justify-content: center
-			align-items: center
-			right: 0
-			position: absolute
-			height: 92vh
-			top: 8vh
-			background-color: rgba(72, 84, 96,0.5)
-			width: 20%
-			transform: translateX(100%)
-			transition: transform .5s ease-out
-			li
-				list-style: none
-				a
-					color: white
-					text-decoration: none
-					font-weight: bold
-					font-size: 14px
-					letter-spacing: 2px
-					&:hover
-						color: orangered
-		.links-active
-			transform: translateX(0%)
+			transition: all 0.3s ease
+
+	.links
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-items: center
+		right: 0
+		position: absolute
+		height: 92vh
+		top: 8vh
+		background-color: rgba(72, 84, 96,0.5)
+		width: 20%
+		transform: translateX(100%)
+		transition: transform .5s ease-out
+		li
+			list-style: none
+			a
+				color: white
+				text-decoration: none
+				font-weight: bold
+				font-size: 14px
+				letter-spacing: 2px
+				&:hover
+					color: orangered
+	.links-active
+		transform: translateX(0%)
 
 
-
-
-
-
-		
+.toggle1
+	transform: rotate(-45deg) translate(-5px, 6px)
+.toggle2
+	opacity: 0
+.toggle3
+	transform: rotate(45deg) translate(-5px, -6px)

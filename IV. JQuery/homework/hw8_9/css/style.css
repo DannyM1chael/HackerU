@@ -6,13 +6,6 @@
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden; }
-  body .logo {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 3px;
-    font-size: 25px;
-    margin-left: 5%; }
   body .page1 {
     background-image: url("../img/volcano.jpg");
     background-size: cover;
@@ -42,6 +35,13 @@ nav {
   min-height: 8vh;
   width: 100%;
   background-color: rgba(72, 84, 96, 0.5); }
+  nav .logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 25px;
+    margin-left: 5%; }
   nav .burgermenu {
     margin-right: 9%; }
     nav .burgermenu div {
@@ -50,37 +50,41 @@ nav {
       height: 3px;
       background-color: white;
       margin: 5px;
-      cursor: pointer; }
-    nav .burgermenu .line1 .toggle {
-      transform: rotate(-45deg), translate(-5px, 6px); }
-    nav .burgermenu .line2 .toggle {
-      opacity: 0; }
-    nav .burgermenu .line3 .toggle {
-      transform: rotate(45deg), translate(-5px, -6px); }
-    nav .burgermenu .links {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      right: 0;
-      position: absolute;
-      height: 92vh;
-      top: 8vh;
-      background-color: rgba(72, 84, 96, 0.5);
-      width: 20%;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-out; }
-      nav .burgermenu .links li {
-        list-style: none; }
-        nav .burgermenu .links li a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-          font-size: 14px;
-          letter-spacing: 2px; }
-          nav .burgermenu .links li a:hover {
-            color: orangered; }
-    nav .burgermenu .links-active {
-      transform: translateX(0%); }
+      cursor: pointer;
+      transition: all 0.3s ease; }
+  nav .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+    position: absolute;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgba(72, 84, 96, 0.5);
+    width: 20%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out; }
+    nav .links li {
+      list-style: none; }
+      nav .links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 2px; }
+        nav .links li a:hover {
+          color: orangered; }
+  nav .links-active {
+    transform: translateX(0%); }
+
+.toggle1 {
+  transform: rotate(-45deg) translate(-5px, 6px); }
+
+.toggle2 {
+  opacity: 0; }
+
+.toggle3 {
+  transform: rotate(45deg) translate(-5px, -6px); }
 
 /*# sourceMappingURL=style.css.map */
