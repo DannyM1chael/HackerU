@@ -1,62 +1,50 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <title>Appetit Card</title>
     </head>
     <body>
-<!--         <section class="top_nav">
-            <div>
-                <nav class="menu-opener">
-                    <div class="menu-opener-inner"></div>
-                </nav>
-                <nav class="menu">
-                    <ul class="menu-inner">
-                        <li>
-                            <a href="#" class="menu-link">Restaurants by city</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link">Restaurants by name</a>
-                        </li>                    
-                        <li>
-                            <a href="#" class="menu-link">About us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link">How can we help?</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link">Get started</a>
-                        </li>
-                        <li><a href="#" class="menu-link">Stay involved</a>
-                        </li>   
-                    </ul>
-                </nav>
-            </div>
-        </section> -->
         <section class="font_banner">
             <div class="logo">
-                <p>Appetit<span>Card</span></p>
+                <div class="logo-image">
+                    <img src="img/logo.png" alt="">
+                </div>
                 <button class="btn">Get your card</button>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
             <div class="font_content">
-                <h1>Dine Smarter. Save Money</h1>
-                <div class="font_banner_sticker"><span class="banner_sticker-sum">$72</span><span class="banner_sticker-txt">per year</span>
+                <div class="font_text">
+                    <h1>Dine Smarter. Save Money</h1>
+                    <h4>Get an official 50% discount in 3400 Restaurants and Cafe Across Germany. It's easy as never before - just  &#8364;72 per year</h4>
                 </div>
-                <h4>Get an official 50% discount in 3400 Restaurants and Cafe Across Germany. It's easy as never before - just $72 per year</h4>
-                <div class="search-form">
-                    <form action="" class="search_form">
-                        <input class="search_form_input" type="text">
-                        <select class="search_form_select" name="distance" id=""></select>
-                        <button class="search_form_btn">Search</button>
-                    </form>
+                <div class="font_sticker">
+                    <span class="font_sticker-sum"> &#8364;72</span>
+                    <span>per year</span>
                 </div>
+            </div>
+            <form action="" class="search_form">
+                <input class="search_form_input" type="text" placeholder="Restaurant Name">
+                <select class="search_form_select" name="distance"></select>
+                <button class="search_form_btn">Search</button>
+            </form>
+            <div class="slider">
+                <div id="slider1"></div>
+                <div id="slider2"></div>
+                <div id="slider3"></div>
             </div>
         </section>
         <section class="partners">
             <h2>Start saving today at...</h2>
             <div>
+                <span><a href="#"><img src="img/arrow_left.png" alt=""></a></span>
                 <span><a href="#"><img src="img/blogo1.png" alt=""></a></span>
                 <span><a href="#"><img src="img/blogo2.png" alt=""></a></span>
                 <span><a href="#"><img src="img/blogo3.png" alt=""></a></span>
@@ -67,6 +55,7 @@
                 <span><a href="#"><img src="img/blogo8.png" alt=""></a></span>
                 <span><a href="#"><img src="img/blogo9.png" alt=""></a></span>
                 <span><a href="#"><img src="img/blogo10.png" alt=""></a></span>
+                <span><a href="#"><img src="img/arrow_right.png" alt=""></a></span>
             </div>
         </section>
         <section class="using_card">
@@ -115,13 +104,11 @@
         <section class="map">
             <h2>Search Restaurant Nearby</h2>
             <div class="map_img">
-                <div class="search-form">
-                    <form action="" class="search_form">
-                        <input class="search_form_input" type="text">
-                        <select class="search_form_select" name="distance" id=""></select>
-                        <button class="search_form_btn">Search</button>
-                    </form>
-                </div>
+                <form action="" class="search_form">
+                    <input class="search_form_input" type="text">
+                    <select class="search_form_select" name="distance" id=""></select>
+                    <button class="search_form_btn">Search</button>
+                </form>
             </div>
             <button class="btn_try">try now</button>
         </section>

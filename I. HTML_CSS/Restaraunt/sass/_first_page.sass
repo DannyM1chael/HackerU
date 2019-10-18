@@ -1,63 +1,89 @@
+@import 'config'
 
 .font_banner
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
 	height: 670px
 	width: 100%
-	background-image: url('../img/font_banner.jpg')
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/font_banner.jpg')
 	background-size: cover
 	background-position: center
 	.logo
+		height: 12vh
+		width: 100%
 		display: flex
 		justify-content: space-between
-		p
-			margin: 20px 2px 0 80px
-			color: white
-			text-transform: uppercase
-		button
-			margin: 20px 150px 0 0
-			color: #e56b22
-			border: 1px solid #e56b22
-			border-radius: 1px
-			background-color: transparent
-			text-transform: uppercase
-			padding: 10px 20px
-			outline: none
-			cursor: pointer
-.font_content
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
-	h1,h4
-		color: white
-	.font_banner_sticker
-		display: flex
-		flex-direction: column
-		justify-content: center
 		align-items: center
-		border-radius: 50%
-		background-color: #ff7112
-		height: 120px
-		width:  120px
-		span
+		.logo-image
+			margin-left: 5%
+		button
+			margin-left: 60%
+			@extend %btn
+		.burger
+			margin-right: 5%
+			div
+				display: block
+				width: 25px
+				height: 3px
+				background-color: white
+				margin: 5px
+				cursor: pointer
+
+	.font_content
+		display: flex
+		width: 50%
+		.font_text
 			color: white
-		.banner_sticker-sum
-			font-size: 36px
+			h1
+				font-size: 45px
+				letter-spacing: 1px
+			h4
+				font-weight: 100
+		.font_sticker
+			display: flex
+			flex-direction: column
+			justify-content: center
+			border-radius: 50%
+			background-color: #ff7112
+			height: 90px
+			width:  90px
+			padding: 20px
+			span
+				color: white
+				font-weight: 100
+				white-space: nowrap
+			.font_sticker-sum
+				font-size: 36px
+				font-weight: 500
+	.slider
+		display: flex
+		justify-content: space-around
+		height: 12vh
+		width: 5%
+		#slider1
+			background-color: white
+			height: 6px
+			width: 6px
+			border-radius: 50%
+		#slider2, #slider3
+			background-color: white
+			height: 3px
+			width: 3px
+			border-radius: 50%
 
 .search_form_input
-	height: 57px
-	width: 458px
-	border: none
+	@include search(458px)
 .search_form_select
-	height: 57px
-	width: 278px
-	border: none
+	@include search(278px)
 .search_form_btn
-	height: 57px
-	width: 182px
-	border: none
+	@include search(182px)
+	font-weight: bold
 	text-transform: uppercase
 	background-color: #0fae58
 	color: white
+	cursor: pointer
 
 .partners
 	display: flex
@@ -93,66 +119,34 @@
 					margin-bottom: 10px
 			.btn_try
 				margin: 0 40px
-				color: #e56b22
-				border: 1px solid #e56b22
-				border-radius: 1px
-				background-color: transparent
-				text-transform: uppercase
-				padding: 10px 20px
-				outline: none
-				cursor: pointer
+				@extend %btn
+
 
 	.using_card_bottom
 		display: flex
 		justify-content: space-between
+		font-size: 0
 		.using_card_step1
 			height: 222px
 			background-color: #d88855
 			div
-				color: white
-				margin: 30px
+				@extend %div
 			.step1
-				display: flex
-				align-items: center
-				justify-content: center
-				height: 50px
-				width: 50px
-				border-radius: 50%
-				background-color: #ff7112
-				color: white
-				margin: 30px
+				@include stepBtm(50%, #ff7112)
 		.using_card_step2
 			height: 222px
 			background-color: #67ae74
 			div
-				color: white
-				margin: 30px
+				@extend %div
 			.step2
-				display: flex
-				align-items: center
-				justify-content: center
-				height: 50px
-				width: 50px
-				border-radius: 50%
-				background-color: #0fae58
-				color: white
-				margin: 30px
+				@include stepBtm(50%, #0fae58)
 		.using_card_step3
 			height: 222px
 			background-color: #708973
 			div
-				color: white
-				margin: 30px
+				@extend %div
 			.step3
-				display: flex
-				align-items: center
-				justify-content: center
-				height: 50px
-				width: 50px
-				border-radius: 50%
-				background-color: #27312a
-				color: white
-				margin: 30px
+				@include stepBtm(50%, #27312a)
 
 .map
 	display: flex
@@ -162,7 +156,7 @@
 	margin-right: 5%
 	h2
 		text-align: center
-		margin: 20px 0 32px 0
+		margin: 32px 0 20px 0
 	.map_img
 		display: flex
 		justify-content: center
@@ -170,21 +164,10 @@
 		background-size: cover
 		background-position: center
 		height: 570px
-		.search-form
+		div
 			margin-top: 80px
-
-.btn_try
-	display: inline-block
-	color: #e56b22
-	border: 1px solid #e56b22
-	border-radius: 1px
-	background-color: transparent
-	text-transform: uppercase
-	padding: 10px 20px
-	outline: none
-	cursor: pointer
-	margin: 30px 0
-	width: 270px
+		.btn_try
+			@extend %btn
 
 	
 	

@@ -1,0 +1,38 @@
+*
+	margin:  0
+	padding: 0
+	box-sizing: border-box
+
+%btn
+	color: #e56b22
+	border: 1px solid #e56b22
+	border-radius: 1px
+	background-color: transparent
+	text-transform: uppercase
+	font-weight: 700
+	padding: 10px 20px
+	outline: none
+	cursor: pointer
+	&:hover
+		background-color: orangered
+		color: white
+%div
+	color: white
+	margin: 30px
+	font-size: 20px
+
+@mixin stepBtm($radius, $bgcolor)
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 50px
+	width: 50px
+	border-radius: $radius
+	background-color: $bgcolor
+	color: white
+	margin: 30px
+
+@mixin search($width)
+	height: 50px
+	width: $width
+	border: none
