@@ -7,7 +7,7 @@
 	align-items: center
 	height: 670px
 	width: 100%
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/font_banner.jpg')
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/font_banner.jpg')
 	background-size: cover
 	background-position: center
 	.logo
@@ -49,7 +49,8 @@
 			background-color: #ff7112
 			height: 90px
 			width:  90px
-			padding: 20px
+			padding: 10px
+			margin-left: 20px
 			span
 				color: white
 				font-weight: 100
@@ -75,8 +76,20 @@
 
 .search_form_input
 	@include search(458px)
+	padding: 20px
+	font-size: 20px
+	float: left
+	border-right: 1px solid #afafaf
+	&::placeholder
+		letter-spacing: 1px
+		font-weight: bold
+		font-size: 20px
+		color: #afafaf
 .search_form_select
 	@include search(278px)
+	font-size: 20px
+	font-weight: bold
+	float: left
 .search_form_btn
 	@include search(182px)
 	font-weight: bold
@@ -84,7 +97,6 @@
 	background-color: #0fae58
 	color: white
 	cursor: pointer
-
 .partners
 	display: flex
 	flex-direction: column
@@ -93,12 +105,15 @@
 	h2
 		margin: 32px 0 32px 0
 	div
+		width: 90%
+		display: flex
+		justify-content: space-around
+		align-items: center
 		margin-bottom: 20px
 
 .using_card
 	h2
-		text-align: center
-		margin: 20px 0 32px 0
+		@extend %text
 
 .using_card
 	margin-left: 5%
@@ -107,20 +122,28 @@
 	.using_card_top
 		display: flex
 		.font_card
-			display: flex
+			height: 484px
+			width: 68.3%
+			background-image: url('../img/cards.png')
+			background-size: cover
+			background-position: center
 		.using_card_content
 			display: flex
+			height: 484px
+			width: 31.7%
 			flex-direction: column
 			color: white
 			background-color: #27312a
 			.using_card_text
-				margin: 40px
+				margin: 40px 40px 20px 40px
 				h3
-					margin-bottom: 10px
+					margin-bottom: 20px
+				p
+					font-size: 14px
+					word-spacing: 4px
 			.btn_try
 				margin: 0 40px
 				@extend %btn
-
 
 	.using_card_bottom
 		display: flex
@@ -128,35 +151,33 @@
 		font-size: 0
 		.using_card_step1
 			height: 222px
-			background-color: #d88855
+			background: linear-gradient(rgba(216, 136, 85, .8), rgba(216, 136, 85, .8)), url('../img/step1.jpg')
+			background-size: cover
 			div
 				@extend %div
 			.step1
 				@include stepBtm(50%, #ff7112)
 		.using_card_step2
 			height: 222px
-			background-color: #67ae74
+			background: linear-gradient(rgba(103, 174, 116, .8), rgba(103, 174, 116, .8)), url('../img/step2.jpg')
+			background-size: cover
 			div
 				@extend %div
 			.step2
 				@include stepBtm(50%, #0fae58)
 		.using_card_step3
 			height: 222px
-			background-color: #708973
+			background: linear-gradient(rgba(112, 137,115, .8), rgba(112, 137, 115, .8)), url('../img/step3.jpg')
+			background-size: cover
 			div
 				@extend %div
 			.step3
 				@include stepBtm(50%, #27312a)
 
 .map
-	display: flex
-	flex-direction: column
-	justify-content: center
-	margin-left: 5%
-	margin-right: 5%
+	@extend %header
 	h2
-		text-align: center
-		margin: 32px 0 20px 0
+		@extend %text
 	.map_img
 		display: flex
 		justify-content: center
@@ -164,10 +185,86 @@
 		background-size: cover
 		background-position: center
 		height: 570px
+		.search_form
+			margin-top: 85px
+.btn_try
+	margin: 30px 450px
+	@extend %btn
+
+.full_key
+	@extend %header
+	h2
+		@extend %text
+	.full_key_content
+		display: flex
+		flex-wrap: wrap
 		div
-			margin-top: 80px
-		.btn_try
-			@extend %btn
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			height: 115px
+			width: 50%
+			background-color: white
+			&:nth-child(odd):not(:last-child)
+				border-right: 1px solid #f7f7f7
+				border-bottom: 1px solid #f7f7f7
+			&:nth-child(even):not(:last-child)
+				border-bottom: 1px solid #f7f7f7
+			span
+				margin: 0 30px
+				padding: 7px
+				font-weight: bold
+				text-align: center
+				height: 34px
+				width: 60px
+				background-color: #0fae58
+				color: white
+				border-radius: 5px
+			p
+				margin-right: 30px
+			.shape
+				background-image: linear-gradient(135deg, transparent 49%, white, transparent 54%)
+			
+			.phone, .cutlery, .sphere
+				font-family: 'icomoon'
+			.phone:before 
+				content: "\f095"
+			.cutlery:before 
+				content: "\f0f5"
+			.sphere:before 
+				content: "\e9c9"
+
+.btn_try
+	margin: 30px 450px
+	@extend %btn
+
+footer
+	@extend %header
+	background-color: #27312a 
+	.footer_top
+		display: flex
+		height: 100px
+		justify-content: space-between
+		align-items: center
+		.social-links
+			img
+				width: 10%
+				margin: 5px
+	.footer_middle
+		display: flex
+		height: 235px
+		justify-content: space-between
+		.menu-block_list
+			li
+				list-style: none
+			a
+				text-decoration: none
+				color: white
+	.footer_bottom
+		display: flex
+		height: 100px
+
+
 
 	
 	
