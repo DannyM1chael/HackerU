@@ -1,0 +1,138 @@
+@import 'config'
+
+.navigation
+	height: 12vh
+	background-color: #27312a
+	width: 100vw
+	border-bottom: 2px solid #5e5e5e 
+
+.burger-inner
+	display: flex
+	max-height: 750px
+	padding: 30px 60px 60px 60px
+	background-color: #27312a
+	.burger-inner_select
+		div
+			height: 50%
+			h3
+				text-transform: uppercase
+				color: #0fae58
+				letter-spacing: 1px
+				font-size: 13px
+				padding-bottom: 15px
+			select
+				background-color: #27312a
+				color: white
+				width: 100%
+				height: 50%
+				font-size: 14px
+				border: none
+				outline: none
+				&::-webkit-scrollbar
+					width: 2px
+					background-color: #5e5e5e
+				&::-webkit-scrollbar-thumb
+					background-color: white
+				option
+					margin: 5px
+	.burger-inner_menu
+		margin-left: 100px
+		div
+			display: flex
+			height: 235px
+			.menu-block
+				display: flex
+				flex-direction: column
+				justify-content: flex-start
+				margin-right: 30px
+				.menu-block_title
+					white-space: nowrap
+					text-transform: uppercase
+					color: #e48c05
+					letter-spacing: 1px
+					font-size: 13px
+					padding-bottom: 15px
+				.menu-block_list
+					line-height: 150%
+					li
+						list-style: none
+						white-space: nowrap
+						font-size: 14px
+					a
+						text-decoration: none
+						color: white
+						&:hover
+							text-decoration: underline
+		.burger-inner_banner
+			background-image: url('../img/burgers.jpg')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			h1
+				color: white
+				font-size: 45px
+				letter-spacing: 1px
+			h5, h6
+				color: white
+			button
+				color: white
+				border-radius: 5px
+				background-color: #84bd00
+				text-transform: uppercase
+				font-weight: 700
+				padding: 10px 70px
+				outline: none
+				cursor: pointer
+				margin: 5px 0
+				border: none
+		.subscribe-block
+			display: flex
+			justify-content: space-between
+			line-height: 150%
+			form
+				width: 45%
+				input
+					height: 50px
+					width: 85%
+					border: 1px solid white
+					background-color: #27312a
+					padding: 20px
+					font-size: 20px
+					color: white
+					border-right: none
+					outline: none
+					float: left
+					&::placeholder
+						letter-spacing: 1px
+						font-weight: bold
+						font-size: 20px
+						color: #afafaf
+				p
+					color: white
+					font-size: 14px
+					padding-bottom: 10px
+				button
+					height: 50px
+					border: 1px solid white
+					background-color: #27312a
+					padding: 0 10px
+					font-size: 20px
+					color: white
+					cursor: pointer
+					border-left: none
+					outline: none
+					&:hover
+						color: #e56b22
+			.social-links
+				display: flex
+				.fab
+					color: white
+					cursor: pointer
+					font-size: 36px
+					margin: 5px
+					&:hover
+						color: #e56b22

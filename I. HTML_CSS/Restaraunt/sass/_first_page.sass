@@ -30,6 +30,7 @@
 				background-color: white
 				margin: 5px
 				cursor: pointer
+				transition: all 0.3s ease
 
 	.font_content
 		display: flex
@@ -78,6 +79,7 @@
 	@include search(458px)
 	padding: 20px
 	font-size: 20px
+	outline: none
 	float: left
 	border-right: 1px solid #afafaf
 	&::placeholder
@@ -89,6 +91,7 @@
 	@include search(278px)
 	font-size: 20px
 	font-weight: bold
+	outline: none
 	float: left
 .search_form_btn
 	@include search(182px)
@@ -246,25 +249,91 @@ footer
 		height: 100px
 		justify-content: space-between
 		align-items: center
+		margin: 0 60px
 		.social-links
-			img
-				width: 10%
+			display: flex
+			.fab
+				color: white
+				cursor: pointer
+				font-size: 36px
 				margin: 5px
+				&:hover
+					color: #e56b22
 	.footer_middle
 		display: flex
 		height: 235px
-		justify-content: space-between
-		.menu-block_list
-			li
-				list-style: none
-			a
-				text-decoration: none
+		margin: 0 60px
+		border-top: 2px solid #5e5e5e
+		border-bottom: 2px solid #5e5e5e
+		.menu-block
+			width: 15%
+			margin-right: 30px
+			margin-top: 30px
+			.menu-block_title
+				white-space: nowrap
+				text-transform: uppercase
+				color: #e48c05
+				letter-spacing: 1px
+				font-size: 13px
+				padding-bottom: 15px
+			.menu-block_list
+				line-height: 150%
+				li
+					list-style: none
+					white-space: nowrap
+					font-size: 14px
+				a
+					text-decoration: none
+					color: white
+					&:hover
+						text-decoration: underline
+		.subscribe-block
+			width: 30%
+			line-height: 150%
+			margin-top: 30px
+			input
+				height: 50px
+				width: 85%
+				border: 1px solid white
+				background-color: #27312a
+				padding: 20px
+				font-size: 20px
 				color: white
+				border-right: none
+				outline: none
+				float: left
+				&::placeholder
+					letter-spacing: 1px
+					font-weight: bold
+					font-size: 20px
+					color: #afafaf
+			p
+				color: white
+				font-size: 14px
+				padding-bottom: 10px
+			button
+				height: 50px
+				border: 1px solid white
+				background-color: #27312a
+				padding: 0 10px
+				font-size: 20px
+				color: white
+				cursor: pointer
+				border-left: none
+				&:hover
+					color: #e56b22
 	.footer_bottom
-		display: flex
 		height: 100px
+		padding-left: 60px
+		p
+			color: white
+			margin-top: 30px
 
-
-
+.toggle1
+	transform: rotate(-45deg) translate(-5px, 6px)
+.toggle2
+	opacity: 0
+.toggle3
+	transform: rotate(45deg) translate(-5px, -6px)
 	
 	

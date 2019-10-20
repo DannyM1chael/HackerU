@@ -1,13 +1,10 @@
-function toggle() {
-    if (document.querySelector(".menu-opener").classList.contains('active')) {
-        document.querySelector(".menu-opener-inner").classList.remove('active');
-        document.querySelector(".menu-opener").classList.remove('active');
-        document.querySelector(".menu").classList.remove('active');
-    } else {
-        document.querySelector(".menu-opener-inner").classList.add('active');
-        document.querySelector(".menu-opener").classList.add('active');
-        document.querySelector(".menu").classList.add('active');
-    }
-}
+$(document).ready(function() {
+	var burgerMenu = $('.burger');
+	var innerMenu = $('.burger-inner');
 
-document.querySelector(".menu-opener").onclick = toggle;
+	burgerMenu.on('click', function(){
+		burgerMenu.find('.line1').toggleClass('toggle1');
+		burgerMenu.find('.line2').toggleClass('toggle2');
+		burgerMenu.find('.line3').toggleClass('toggle3');
+	});
+})

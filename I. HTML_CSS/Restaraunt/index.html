@@ -6,9 +6,115 @@
         <link rel="stylesheet" href="css/font.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://kit.fontawesome.com/b91122daa2.js" crossorigin="anonymous"></script>
         <title>Appetit Card</title>
     </head>
     <body>
+        <div class="navigation">
+            <div></div>
+        </div>
+        <section class="burger-inner">
+            <div class="burger-inner_select">
+                <div>
+                    <h3>Restaraunts by city</h3>
+                    <select multiple="city">
+                        <option>Moscow</option>
+                        <option>Vladimir</option>
+                        <option>Yaroslavl</option>
+                        <option>Tula</option>
+                        <option>Kaluga</option>
+                        <option>Saint-Petersburg</option>
+                        <option>Rostov</option>
+                        <option>Kazan</option>
+                        <option>Suzdal</option>
+                        <option>Arkhangelsk</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Restaraunts by name</h3>
+                    <select multiple="name">
+                        <option>ASK Italian</option>
+                        <option>Azzuro</option>
+                        <option>Banana Tree</option>
+                        <option>Barcelona Tapas</option>
+                        <option>Belgo</option>
+                        <option>Bella Italia</option>
+                        <option>Byron</option>
+                        <option>Cafe Rouge</option>
+                        <option>Chino Latino</option>
+                        <option>Chiquito</option>
+                    </select>
+                </div>
+            </div>
+            <div class="burger-inner_menu">
+                <div>
+                    <div class="menu-block">
+                        <h3 class="menu-block_title">About us</h3>
+                        <ul class="menu-block_list">
+                            <li><a href="#">Our company</a></li>
+                            <li><a href="#">Customer testimonials</a></li>
+                            <li><a href="#">Why we're different</a></li>
+                            <li><a href="#">Our chosen charity</a></li>
+                            <li><a href="#">Work for us</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-block">
+                        <h3 class="menu-block_title">How can we help?</h3>
+                        <ul class="menu-block_list">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Restaurants</a></li>
+                            <li><a href="#">Opportunities</a></li>
+                            <li><a href="#">For Businesses</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-block">
+                        <h3 class="menu-block_title">Get started</h3>
+                        <ul class="menu-block_list">
+                            <li><a href="#">How to use</a></li>
+                            <li><a href="#">Buy an AppetitCard</a></li>
+                            <li><a href="#">Buy an AppetitCard Gift</a></li>
+                            <li><a href="#">UNIDAYS</a></li>
+                            <li><a href="#">For Businesses</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-block">
+                        <h3 class="menu-block_title">Stay involved</h3>
+                        <ul class="menu-block_list">
+                            <li><a href="#">Newsletter Sign up</a></li>
+                            <li><a href="#">Appetit blog</a></li>
+                            <li><a href="#">Recommend</a></li>
+                            <li><a href="#">Restaurants</a></li>
+                            <li><a href="#">Restaurants Reviews</a></li>
+                            <li><a href="#">AppetitCard+ Offer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-inner_banner">
+                    <h1>Save Money. Eat out.</h1>
+                    <h5>&#163;1 for 60 days. Includes tastecard+*</h5>
+                    <button>Try now</button>
+                    <h6>&#163;1/60 days. Cancel anytime. Include tastecard+. Renews at &#163;34.99(excludind tastecard+)</h6>
+                </div>
+                <div class="subscribe-block">
+                    <form>
+                        <p>Subscribe to our newsletter to be the first to hear about exclusive offers and discounts</p>
+                        <input type="e-mail" placeholder="Email Address">
+                        <button class="far fa-paper-plane" type="submit"></button>
+                    </form>
+                    <div class="social-links">
+                        <ul>
+                            <li class="fab fa-facebook"><a href="#"></a></li>
+                            <li class="fab fa-twitter-square"><a href="#"></a></li>
+                            <li class="fab fa-youtube"><a href="#"></a></li>
+                            <li class="fab fa-instagram"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>              
+            </div>
+        </section>
         <section class="font_banner">
             <div class="logo">
                 <div class="logo-image">
@@ -186,10 +292,12 @@
                     <img src="img/logo.png">
                 </div>
                 <div class="social-links">
-                        <a href="#"><img src="img/social/face.png" alt=""></a>
-                        <a href="#"><img src="img/social/insta.png" alt=""></a>
-                        <a href="#"><img src="img/social/twit.png" alt=""></a>
-                        <a href="#"><img src="img/social/wts.png" alt=""></a>
+                    <ul>
+                        <li class="fab fa-facebook"><a href="#"></a></li>
+                        <li class="fab fa-twitter-square"><a href="#"></a></li>
+                        <li class="fab fa-youtube"><a href="#"></a></li>
+                        <li class="fab fa-instagram"><a href="#"></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer_middle">
@@ -204,7 +312,7 @@
                     </ul>
                 </div>
                 <div class="menu-block">
-                    <h3 class="menu-block_title">How we can help?</h3>
+                    <h3 class="menu-block_title">How can we help?</h3>
                     <ul class="menu-block_list">
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">FAQs</a></li>
@@ -237,22 +345,18 @@
                     </ul>
                 </div>
                 <div class="subscribe-block">
-                    <p>Subscribe to our newsletter to be the first to hear about exclusive offers and discounts</p>
-                    <form action="post">
-                        <input type="e-mail" placeholder="E-mail Address">
+                    <form>
+                        <p>Subscribe to our newsletter to be the first to hear about exclusive offers and discounts</p>
+                        <input type="e-mail" placeholder="Email Address">
+                        <button class="far fa-paper-plane" type="submit"></button>
                     </form>
                 </div>
             </div>
             <div class="footer_bottom">
-                <div class="footer_copyright">
-                        @2017-2018 AppetitCard. All Rights Reserved
-                </div>
-                <div class="apps">
-                    <a class="apps__link" href="#"></a>
-                    <a class="apps__link apps__link_google" href="#"></a>
-                </div>
+                <p> @2017-2018 AppetitCard. All Rights Reserved</p>
             </div>
         </footer>
     </body>
-    <!-- <script src="script/script.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script/script.js"></script>
 </html>
