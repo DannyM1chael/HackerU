@@ -88,8 +88,8 @@ function beforeSendHandler() {
 					].join('');
 	$('.modalWindow').html(modalHtml);
 	$('.modalWindow').css('display', 'flex');
-	$('#load').stop(true).animate({ 'width': '100%' }, 500);
-	$('#load').stop(true).animate({ 'width': '0%' }, 500);
+	$('#load').stop(true).animate({ width: '100%' }, 500);
+	$('#load').stop(true).animate({ width: '0%' }, 500);
 	$('#load').ready(function(){
 		$('.modalWindow').hide();
 	});

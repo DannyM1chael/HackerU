@@ -37,18 +37,22 @@ function AJAXHandler(jsonData){
     postElem.appendChild(titleElem);
     postElem.appendChild(bodyElem);
     contentElem.appendChild(postElem);
-  }
+  };
   
-}
+};
 
 function AJAXHandlerUser(jsonData) {
-    userDataElem = document.getElementsByClassName('.userData');
+    var userDataElem = document.getElementsByClassName('.userData');
     userDataElem.innerHTML = "";
-}
+    
+};
 
-function buttonHandler(){
+document.querySelector('.btn').addEventListener('click', function(){
     var inputData = document.querySelector('input').value;
+    if (isNaN(inputData) || inputData<0 || inputData>10){
+      alert('Введите id от 1 до 10');
+      return;
+    }
+    loadDataUser(inputData);
     loadData(inputData);
-}
-
-document.querySelector('.btn').addEventListener('click', function(){buttonHandler();})
+})
