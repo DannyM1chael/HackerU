@@ -49,11 +49,13 @@ body {
   background-size: cover;
   background-position: center; }
   .font_banner .logo {
+    position: fixed;
     height: 12vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    background-color: rgba(39, 49, 42, 0.4); }
     .font_banner .logo .logo-image {
       margin-left: 5%; }
     .font_banner .logo button {
@@ -70,7 +72,8 @@ body {
         transition: all 0.3s ease; }
   .font_banner .font_content {
     display: flex;
-    width: 50%; }
+    width: 50%;
+    padding-top: 15%; }
     .font_banner .font_content .font_text {
       color: white; }
       .font_banner .font_content .font_text h1 {
@@ -422,42 +425,48 @@ body {
   text-align: center;
   margin: 32px 0 20px 0; }
 
-.navigation {
-  height: 12vh;
-  background-color: #27312a;
-  width: 100vw;
-  border-bottom: 2px solid #5e5e5e; }
-
 .burger-inner {
   display: flex;
-  max-height: 750px;
-  padding: 30px 60px 60px 60px;
-  background-color: #27312a; }
-  .burger-inner .burger-inner_select div {
-    height: 50%; }
-    .burger-inner .burger-inner_select div h3 {
-      text-transform: uppercase;
-      color: #0fae58;
-      letter-spacing: 1px;
-      font-size: 13px;
-      padding-bottom: 15px; }
-    .burger-inner .burger-inner_select div select {
-      background-color: #27312a;
-      color: white;
-      width: 100%;
-      height: 50%;
-      font-size: 14px;
-      border: none;
-      outline: none; }
-      .burger-inner .burger-inner_select div select::-webkit-scrollbar {
-        width: 2px;
-        background-color: #5e5e5e; }
-      .burger-inner .burger-inner_select div select::-webkit-scrollbar-thumb {
-        background-color: white; }
-      .burger-inner .burger-inner_select div select option {
-        margin: 5px; }
+  height: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: #27312a;
+  overflow: hidden;
+  animation: close 0.5s ease-in-out; }
+  .burger-inner .burger-inner_select {
+    padding: 12vh 0 0 60px; }
+    .burger-inner .burger-inner_select div {
+      height: 50%; }
+      .burger-inner .burger-inner_select div h3 {
+        text-transform: uppercase;
+        color: #0fae58;
+        letter-spacing: 1px;
+        font-size: 13px;
+        padding-bottom: 15px; }
+      .burger-inner .burger-inner_select div select {
+        background-color: #27312a;
+        color: white;
+        width: 100%;
+        height: 50%;
+        font-size: 14px;
+        border: none;
+        outline: none; }
+        .burger-inner .burger-inner_select div select::-webkit-scrollbar {
+          width: 2px;
+          background-color: #5e5e5e; }
+        .burger-inner .burger-inner_select div select::-webkit-scrollbar-thumb {
+          background-color: white; }
+        .burger-inner .burger-inner_select div select option {
+          margin: 5px;
+          cursor: pointer; }
+          .burger-inner .burger-inner_select div select option:hover {
+            color: #e56b22; }
   .burger-inner .burger-inner_menu {
-    margin-left: 100px; }
+    margin-left: 100px;
+    padding-top: 12vh; }
     .burger-inner .burger-inner_menu div {
       display: flex;
       height: 235px; }
@@ -485,6 +494,7 @@ body {
             .burger-inner .burger-inner_menu div .menu-block .menu-block_list a:hover {
               text-decoration: underline; }
     .burger-inner .burger-inner_menu .burger-inner_banner {
+      margin-top: -12vh;
       background-image: url("../img/burgers.jpg");
       background-position: center;
       background-repeat: no-repeat;
@@ -509,7 +519,11 @@ body {
         outline: none;
         cursor: pointer;
         margin: 5px 0;
-        border: none; }
+        border: 1px solid; }
+        .burger-inner .burger-inner_menu .burger-inner_banner button:hover {
+          background-color: transparent;
+          color: #84bd00;
+          border: 1px solid #84bd00; }
     .burger-inner .burger-inner_menu .subscribe-block {
       display: flex;
       justify-content: space-between;
@@ -558,6 +572,20 @@ body {
           .burger-inner .burger-inner_menu .subscribe-block .social-links .fab:hover {
             color: #e56b22; }
 
+.active {
+  height: 670px;
+  animation: open 0.5s ease-in-out; }
+
+@keyframes open {
+  0% {
+    height: 0px; }
+  100% {
+    height: 670px; } }
+@keyframes close {
+  0% {
+    height: 670px; }
+  100% {
+    height: 0px; } }
 * {
   margin: 0;
   padding: 0;
