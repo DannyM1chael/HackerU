@@ -49,7 +49,7 @@ function AJAXHandlerUser(jsonData) {
 
 document.querySelector('.btn').addEventListener('click', function(){
     var inputData = document.querySelector('input').value;
-    if (isNaN(inputData) || inputData<0 || inputData>10){
+    if (isNaN(inputData) || inputData<0 || inputData>10 || inputData ==''){
       alert('Введите id от 1 до 10');
       return;
     }
