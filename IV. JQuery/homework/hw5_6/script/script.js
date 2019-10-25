@@ -42,7 +42,7 @@ function dataHandler(data){
 							`<p>${element.completed}</p>`,
 						`</div>`
 						].join('');
-
+		
 		$('.container').append(newDoHtml);	
 
 	});
@@ -50,7 +50,7 @@ function dataHandler(data){
 }
 
 // проверяем полученные данные - объект или массив
-function successHandler(data, textStatus){
+function successHandler(data){
 	if (Array.isArray(data)){
 		dataHandler(data);
 	}else{
@@ -79,27 +79,23 @@ function errorHandler(data){
 }
 // функция при загрузке
 function beforeSendHandler() {
-	var modalHtml = [ 
-					`<div class='modal'>`,
-						`<div>`,
-						`<p>Loading<span id='load'>...</span></p>`,
-						`</div>`,
-					`</div>`
-					].join('');
-	$('.modalWindow').html(modalHtml);
-	$('.modalWindow').css('display', 'flex');
-	$('#load').stop(true).animate({ width: '100%' }, 500);
-	$('#load').stop(true).animate({ width: '0%' }, 500);
-	$('#load').ready(function(){
-		$('.modalWindow').hide();
-	});
-
+	function back(){$('.searchBtn').text('Поиск')};
+	$('.searchBtn').text('Загрузка...');
+	setTimeout(back, 500);
+	
 }
 // функция при выполнении запроса
 function completeHandler(){
-	console.log('Done');
+	var deal = $('p').text();
+	if (deal == 'true') {
+		$('p').text('✓');	
+		$('.do-content').css('border', '2px solid green');
+	} else{ 
+		$('p').text('✗');
+		$('.do-content').css('border', '2px solid red')
+	}
+	console.log(deal)
 }
-
 
 // создаем функцию, которая забирает данные и объект
 function AjaxGet(idValStr, methods){

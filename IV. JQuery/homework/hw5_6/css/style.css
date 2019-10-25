@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 22%; }
+  margin-top: 20%; }
   .container .do-content {
     display: flex;
     justify-content: flex-start;
@@ -20,6 +20,8 @@
     font-size: 16px; }
   .container h2 {
     font-size: 16px; }
+  .container p {
+    margin: 0 10px 0 auto; }
 
 .modalWindow {
   display: none;
@@ -43,7 +45,8 @@
     background-color: #E1BEE7;
     margin: auto;
     padding: 0;
-    border-radius: 10px; }
+    border-radius: 10px;
+    border: 2px solid red; }
     .modalWindow .modal p {
       font-weight: bold;
       margin: 10px; }
