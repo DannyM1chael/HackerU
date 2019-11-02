@@ -107,8 +107,10 @@ section {
           color: #FFFFFF;
           font-size: 24px;
           padding-bottom: 5%; }
-          section .our-services_content .our-services .our-services_item span:hover {
-            background-color: rgba(0, 95, 163, 0.65); }
+        section .our-services_content .our-services .our-services_item:hover {
+          background: linear-gradient(rgba(0, 95, 163, 0.65), rgba(0, 95, 163, 0.65)), url("../img/our_services.jpg");
+          background-size: cover;
+          background-position: center; }
 
 .our-clients {
   background: #EBEBEB; }
