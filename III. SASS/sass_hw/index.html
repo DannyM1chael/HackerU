@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Merriweather&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="path/to/swiper.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<title>BuhOne</title>
@@ -30,23 +30,28 @@
 		</ul>
 		</div>
 	</nav>
-	<div class="first-screen">
-		<div class="screen">
-			<div class="screen-content">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
 				<h1>Бухгалтерские услуги в Санкт-Петербургe</h1>
-				<div class="btn">
-					Наша презентация
-				</div>
+				<div class="btn">Наша презентация</div>
 			</div>
-			<div class="controls">
-				<div class="slider_controls"></div>
-				<div class="slider_controls"></div>
-				<div class="slider_controls"></div>
-				<div class="slider_controls"></div>
-				<div class="slider_btn-prev"></div>
-				<div class="slider_btn-next"></div>
+			<div class="swiper-slide">
+				<h1>Бухгалтерские услуги в Санкт-Петербургe</h1>
+				<div class="btn">Наша презентация</div>
+			</div>
+			<div class="swiper-slide">
+				<h1>Бухгалтерские услуги в Санкт-Петербургe</h1>
+				<div class="btn">Наша презентация</div>
+			</div>
+			<div class="swiper-slide">
+				<h1>Бухгалтерские услуги в Санкт-Петербургe</h1>
+				<div class="btn">Наша презентация</div>
 			</div>
 		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
 	</div>
 	<section>
 		<div class="our-services_content">
@@ -113,14 +118,6 @@
 				<img src="img/microsoft.png" alt="">
 				<img src="img/microsoft.png" alt="">
 			</div>
-			<div class="controls">
-				<div class="slider_controls"></div>
-				<div class="slider_controls"></div>
-				<div class="slider_controls"></div>
-				<div class="slider_controls"></div>
-				<div class="slider_btn-prev"></div>
-				<div class="slider_btn-next"></div>
-			</div>
 		</div>
 	</section>
 	<div class="reviews">
@@ -133,14 +130,6 @@
 				<p>Екатерина Иванова</p>
 				<p>Директор ООО “Раз-два”</p>
 			</div>
-		</div>
-		<div class="controls">
-			<div class="slider_controls"></div>
-			<div class="slider_controls"></div>
-			<div class="slider_controls"></div>
-			<div class="slider_controls"></div>
-			<div class="slider_btn-prev"></div>
-			<div class="slider_btn-next"></div>
 		</div>
 	</div>
 	<div class="contact">
@@ -170,4 +159,6 @@
 		<div>Разработано: BuhOne</div>
 	</div>
 </body>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="script/script.js"></script>
 </html>
