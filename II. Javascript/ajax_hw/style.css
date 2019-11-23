@@ -14,3 +14,14 @@
 .postElem{
 	width: 30%;
 }
+
+.userData{
+	display: flex;
+	font-style: italic;
+	height: auto;
+	width: auto;
+}
+
+th{
+	text-align: right;
+}

@@ -14,7 +14,7 @@ function loadData(userId){
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
        if (this.readystate == 4 && this.status == 200) {
-           AJAXHandlerUser(JSON.parse(this.responseText));
+          AJAXHandlerUser(JSON.parse(this.responseText));
      }
    };
    xhttp.open("GET", `https://jsonplaceholder.typicode.com/users?id=${userId}`, true);
@@ -42,9 +42,21 @@ function AJAXHandler(jsonData){
 };
 
 function AJAXHandlerUser(jsonData) {
-    var userDataElem = document.getElementsByClassName('.userData');
-    userDataElem.innerHTML = "";
-    
+    let tableElem = document.getElementsByClassName('.userData');
+    tableElem.innerHTML = "";
+
+    for (let key in jsonData[0]) {
+      var trElem = document.createElement('tr');
+      var thElem = document.createElement('th');
+      var tdElem = document.createElement('td');
+
+      thElem.innerHTML = `${key}:`;
+      tdElem.innerHTML = `${jsonData[0][key]}`;
+
+      trElem.appendChild(thElem);
+      trElem.appendChild(tdElem);
+      tableElem.appendChild(trElem);
+    }
 };
 
 document.querySelector('.btn').addEventListener('click', function(){
