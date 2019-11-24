@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   display: flex;
   justify-content: center;
@@ -5,7 +10,6 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
   font-family: consolas; }
   body canvas {
     position: absolute;
@@ -15,80 +19,99 @@ body {
   body #AJAXGetBtn {
     display: inline-block;
     text-align: center;
-    white-space: nowrap;
-    position: relative;
     text-transform: uppercase;
+    white-space: nowrap;
     letter-spacing: 4px;
     padding: 15px 30px;
     font-size: 24px;
-    overflow: hidden;
-    color: #2196f3;
     transition: 0.2s;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #2196f3; }
     body #AJAXGetBtn:hover {
-      color: #255784;
+      color: #255784; }
+    body #AJAXGetBtn:hover {
       background: #2196f3;
       box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3; }
-  body #AJAXPostBtn {
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 15px 30px;
-    font-size: 12px;
-    overflow: hidden;
-    color: #ffa801;
-    transition: 0.2s;
-    cursor: pointer; }
-    body #AJAXPostBtn:hover {
-      color: #255784;
-      background: #ffa801;
-      box-shadow: 0 0 10px #ffa801, 0 0 40px #ffa801, 0 0 80px #ffa801; }
   body #AJAXChooseBtn {
     display: inline-block;
     text-align: center;
-    white-space: nowrap;
-    position: relative;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    white-space: nowrap;
+    letter-spacing: 4px;
     padding: 15px 30px;
-    font-size: 12px;
-    overflow: hidden;
-    color: #0be881;
+    font-size: 24px;
     transition: 0.2s;
-    cursor: pointer; }
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #0be881; }
     body #AJAXChooseBtn:hover {
-      color: #255784;
+      color: #255784; }
+    body #AJAXChooseBtn:hover {
       background: #0be881;
       box-shadow: 0 0 10px #0be881, 0 0 40px #0be881, 0 0 80px #0be881; }
+  body #AJAXPostBtn {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 4px;
+    padding: 15px 30px;
+    font-size: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #ffa801; }
+    body #AJAXPostBtn:hover {
+      color: #255784; }
+    body #AJAXPostBtn:hover {
+      background: #ffa801;
+      box-shadow: 0 0 10px #ffa801, 0 0 40px #ffa801, 0 0 80px #ffa801; }
   body #AJAXDeleteBtn {
     display: inline-block;
     text-align: center;
-    white-space: nowrap;
-    position: relative;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    white-space: nowrap;
+    letter-spacing: 4px;
     padding: 15px 30px;
-    font-size: 12px;
-    overflow: hidden;
-    color: #f53b57;
+    font-size: 24px;
     transition: 0.2s;
-    cursor: pointer; }
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #f53b57; }
     body #AJAXDeleteBtn:hover {
-      color: #255784;
+      color: #255784; }
+    body #AJAXDeleteBtn:hover {
       background: #f53b57;
       box-shadow: 0 0 10px #f53b57, 0 0 40px #f53b57, 0 0 80px #f53b57; }
   body .container {
     display: flex;
     justify-content: center;
-    align-items: center; }
-    body .container div {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; }
+    body .container .profile {
       display: flex;
+      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      width: auto;
-      height: auto;
-      background-image: "spacex.png"; }
+      border-radius: 10px;
+      margin: 20px;
+      background: url("/spacex.png");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+      width: 20%;
+      height: 40%; }
+      body .container .profile p {
+        color: white;
+        letter-spacing: 2px;
+        font-size: 24px;
+        text-transform: uppercase; }
+      body .container .profile input {
+        margin: 5px; }
 
 /*# sourceMappingURL=style.css.map */
