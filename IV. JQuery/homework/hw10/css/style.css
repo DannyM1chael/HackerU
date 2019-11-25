@@ -16,76 +16,6 @@ body {
     top: 0;
     left: 0;
     z-index: -99; }
-  body #AJAXGetBtn {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap;
-    letter-spacing: 4px;
-    padding: 15px 30px;
-    font-size: 24px;
-    transition: 0.2s;
-    cursor: pointer;
-    color: #2196f3; }
-    body #AJAXGetBtn:hover {
-      color: #255784; }
-    body #AJAXGetBtn:hover {
-      background: #2196f3;
-      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3; }
-  body #AJAXChooseBtn {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap;
-    letter-spacing: 4px;
-    padding: 15px 30px;
-    font-size: 24px;
-    transition: 0.2s;
-    cursor: pointer;
-    letter-spacing: 2px;
-    font-size: 12px;
-    color: #0be881; }
-    body #AJAXChooseBtn:hover {
-      color: #255784; }
-    body #AJAXChooseBtn:hover {
-      background: #0be881;
-      box-shadow: 0 0 10px #0be881, 0 0 40px #0be881, 0 0 80px #0be881; }
-  body #AJAXPostBtn {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap;
-    letter-spacing: 4px;
-    padding: 15px 30px;
-    font-size: 24px;
-    transition: 0.2s;
-    cursor: pointer;
-    letter-spacing: 2px;
-    font-size: 12px;
-    color: #ffa801; }
-    body #AJAXPostBtn:hover {
-      color: #255784; }
-    body #AJAXPostBtn:hover {
-      background: #ffa801;
-      box-shadow: 0 0 10px #ffa801, 0 0 40px #ffa801, 0 0 80px #ffa801; }
-  body #AJAXDeleteBtn {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap;
-    letter-spacing: 4px;
-    padding: 15px 30px;
-    font-size: 24px;
-    transition: 0.2s;
-    cursor: pointer;
-    letter-spacing: 2px;
-    font-size: 12px;
-    color: #f53b57; }
-    body #AJAXDeleteBtn:hover {
-      color: #255784; }
-    body #AJAXDeleteBtn:hover {
-      background: #f53b57;
-      box-shadow: 0 0 10px #f53b57, 0 0 40px #f53b57, 0 0 80px #f53b57; }
   body .container {
     display: flex;
     justify-content: center;
@@ -95,23 +25,112 @@ body {
     height: 100vh; }
     body .container .profile {
       display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      margin: 20px;
+      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+      width: 20%;
+      height: 40%; }
+      body .container .profile div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        body .container .profile div p {
+          color: black;
+          letter-spacing: 2px;
+          font-size: 24px;
+          text-transform: uppercase; }
+        body .container .profile div img {
+          border-radius: 50%;
+          margin-top: 10px; }
+      body .container .profile input {
+        margin: 10px 5px 5px 5px; }
+      body .container .profile .buttons {
+        display: flex;
+        flex-direction: row; }
+    body .container .newprofile {
+      display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
       border-radius: 10px;
       margin: 20px;
-      background: url("/spacex.png");
-      background-size: cover;
-      background-position: center;
       box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
       width: 20%;
       height: 40%; }
-      body .container .profile p {
-        color: white;
-        letter-spacing: 2px;
-        font-size: 24px;
-        text-transform: uppercase; }
-      body .container .profile input {
-        margin: 5px; }
+
+#AJAXGetBtn {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 15px 30px;
+  font-size: 24px;
+  transition: 0.2s;
+  cursor: pointer;
+  color: #2196f3;
+  white-space: nowrap; }
+  #AJAXGetBtn:hover {
+    color: #255784; }
+  #AJAXGetBtn:hover {
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3; }
+
+#AJAXChooseBtn {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 15px 30px;
+  font-size: 24px;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #0be881; }
+  #AJAXChooseBtn:hover {
+    color: #255784; }
+  #AJAXChooseBtn:hover {
+    background: #0be881;
+    box-shadow: 0 0 10px #0be881, 0 0 40px #0be881, 0 0 80px #0be881; }
+
+#AJAXPostBtn {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 15px 30px;
+  font-size: 24px;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #ffa801; }
+  #AJAXPostBtn:hover {
+    color: #255784; }
+  #AJAXPostBtn:hover {
+    background: #ffa801;
+    box-shadow: 0 0 10px #ffa801, 0 0 40px #ffa801, 0 0 80px #ffa801; }
+
+#AJAXDeleteBtn {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 15px 30px;
+  font-size: 24px;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #f53b57; }
+  #AJAXDeleteBtn:hover {
+    color: #255784; }
+  #AJAXDeleteBtn:hover {
+    background: #f53b57;
+    box-shadow: 0 0 10px #f53b57, 0 0 40px #f53b57, 0 0 80px #f53b57; }
 
 /*# sourceMappingURL=style.css.map */

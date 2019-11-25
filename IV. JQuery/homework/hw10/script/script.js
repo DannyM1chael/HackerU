@@ -19,17 +19,22 @@ $(document).ready(function(){
                 $.each(i, function(index, j){
                     var existUser = [
                         '<div class="profile">',
-                            `<p>${j.first_name}</p>`,
-                            `<p>${j.last_name}</p>`,
-                            '<div id="AJAXChooseBtn">CHOOSE TEAM MEMBER',
+                            '<div>',
+                                `<img src="${j.avatar}">`,
+                                `<p>${j.first_name}</p>`,
+                                `<p>${j.last_name}</p>`,
                             '</div>',
-                            '<div id="AJAXDeleteBtn">DELETE TEAM MEMBER',
+                            '<div class="buttons">',
+                                '<div id="AJAXChooseBtn">CONFIRM TEAM MEMBER',
+                                '</div>',
+                                '<div id="AJAXDeleteBtn">DELETE TEAM MEMBER',
+                                '</div>',
                             '</div>',
                         '</div>'
                     ].join('');
                     $('.container').html(existUser);
                     $('#AJAXChooseBtn').click(function(){
-                        $(this).parent().css('background-color', '#0be881');
+                        $(this).parent().parent().css('background', '#0be881')
                         $(this).hide();
                     });
                     $('#AJAXDeleteBtn').click(function(){
@@ -51,7 +56,7 @@ $(document).ready(function(){
             };
         });
         var addUser = [
-            '<div class="profile">',
+            '<div class="newprofile">',
                 '<div id="AJAXPostBtn">ADD NEW TEAM MEMBER',
                 '</div>',
             '</div>'
@@ -79,12 +84,16 @@ $(document).ready(function(){
         function dataHandlerUser(response) {
             var addInfo = [
                 '<div class="profile">',
-                    '<input placeholder="first name"></input>',
-                    '<input placeholder="last name"></input>',
-                    '<input placeholder="email"></input>',
-                    '<div id="AJAXChooseBtn">CHOOSE TEAM MEMBER',
+                    '<div>',
+                        '<input placeholder="first name"></input>',
+                        '<input placeholder="last name"></input>',
+                        '<input placeholder="email"></input>',
                     '</div>',
-                    '<div id="AJAXDeleteBtn">DELETE TEAM MEMBER',
+                    '<div class="buttons">',
+                        '<div id="AJAXChooseBtn">CONFIRM TEAM MEMBER',
+                        '</div>',
+                        '<div id="AJAXDeleteBtn">DELETE TEAM MEMBER',
+                        '</div>',
                     '</div>',
                 '</div>'
             ].join('');
