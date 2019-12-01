@@ -1,13 +1,13 @@
 import React from 'react';
 import Footer from '../src/components/footer';
-import AdBottom from '../src/components/ad_bottom';
-import Partners from '../src/components/partners';
+import AdTop from './components/header/ad_top';
+import Nav from './components/header/nav';
 
-function App() {
+function App(props) {
   return (
     <React.Fragment>
-      <Partners />
-      <AdBottom />
+      <AdTop />
+      <Nav />
       <Footer />
     </React.Fragment>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AdBottom(props) {
+function Subscribe(props) {
 
     return(
         <section className="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
@@ -24,4 +24,4 @@ function AdBottom(props) {
     )
 }
 
-export default AdBottom;
+export default Subscribe;
