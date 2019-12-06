@@ -19,11 +19,3 @@ function cocktailSort($array) {
         $left += 1;
     } while ($left <= $right);
 }
-
-$a = [];
-for ($i = 0; $i < 10; $i++) {
-    $a = random_int(0, 100);
-}
-print_r($a);
-$a = cocktailSort($a);
-print_r($a);
