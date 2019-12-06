@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Subscribe(props) {
+function Cart(props) {
 
     return(
         <section className="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
@@ -11,10 +11,10 @@ function Subscribe(props) {
           	<span>Get e-mail updates about our latest shops and special offers</span>
           </div>
           <div className="col-md-6 d-flex align-items-center">
-            <form action="#" className="subscribe-form">
+            <form action="#" className="-form">
               <div className="form-group d-flex">
                 <input type="text" className="form-control" placeholder="Enter email address"/>
-                <input type="submit" value="Subscribe" className="submit px-3"/>
+                <input type="submit" value="" className="submit px-3"/>
               </div>
             </form>
           </div>
@@ -24,4 +24,4 @@ function Subscribe(props) {
     )
 }
 
-export default Subscribe;
+export default Cart;
