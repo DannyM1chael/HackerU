@@ -64,11 +64,11 @@ class TaskDeals extends React.Component {
 	mountEventListeners = () => {
 		this.columns.forEach(item => {
 			const { current: card } = item.ref;
-			card.addEventListener("dragstart", this.handleDragStartTask); // назначить события "начало перемещения"
-			// card.addEventListener("dragenter", handleDragEnter); // назначить события "вход в зону"
-			card.addEventListener("dragleave", this.handleDragLeave); // назначить события "выход из зоны"
-			card.addEventListener("dragover", this.handleDragOver); // назначить события "перемещение над зоной"
-			card.addEventListener("drop", this.handleDrop); // назначить события "перемещение над зоной"
+			card.addEventListener("dragstart", this.handleDragStartTask); 
+			// card.addEventListener("dragenter", handleDragEnter); 
+			card.addEventListener("dragleave", this.handleDragLeave); 
+			card.addEventListener("dragover", this.handleDragOver); 
+			card.addEventListener("drop", this.handleDrop); 
 		});
 	};
 
@@ -122,7 +122,7 @@ class TaskDeals extends React.Component {
 		this.setState({ id: optionDataId});
 	};
 
-	handleDrop = (e) => { // обработчик события - объект "бросили/отпустили" в зону, куда можно сделать drop
+	handleDrop = (e) => { 
 		e.preventDefault();
 		const cardContainer = e.currentTarget.getAttribute("data-name");
 		const taskList = cloneDeep(this.props.taskList);
@@ -147,7 +147,7 @@ class TaskDeals extends React.Component {
 		this.handleResetCardBlock();
 	};
 
-	handleResetCardBlock = (e) => { // убирает пунктирную-рамку вокруг блока "карточки"
+	handleResetCardBlock = (e) => { 
 		e && e.stopPropagation();
 
 		const todoListCard = this.getItemRef(TODO); // document.getElementById("todoListCard");
@@ -163,14 +163,14 @@ class TaskDeals extends React.Component {
 		doneListCard.querySelector(".card-body").classList.remove("card-body-dnd-accept", "card-body-dnd-decline");
 	};
 
-	handleDragLeave = (e) => { // обработчик события - перетаскиваемый элемент "ушел" из зоны, куда можно было сделать drop
+	handleDragLeave = (e) => { 
 		var cardContainer = e.currentTarget;
 
 		var cardBody = cardContainer.querySelector(".card-body");
 		cardBody.classList.remove("card-body-dnd-accept", "card-body-dnd-decline");
 	};
 
-	handleDragOver = (e) => { // обработчик события - перетаскиваемый элемент перемещается над областью, куда можно сделать drop
+	handleDragOver = (e) => { 
 		e.preventDefault();
 		const cardContainer = e.currentTarget;
 		const cardName = cardContainer.getAttribute("data-name");

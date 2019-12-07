@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SelectOptions = (item) => {
+const renderSelectOptions = (item) => {
 	let value = null;
 	let title = null;
 
@@ -48,7 +48,7 @@ const Select = (props) => {
 				value={ value.toLocaleUpperCase() }
 			>
 				{
-					options.map(SelectOptions)
+					options.map(renderSelectOptions)
 				}
 			</select>
 			<small className={ `form-text ${ err && "text-danger" }`}>{ helper }</small>

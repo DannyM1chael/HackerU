@@ -17,7 +17,7 @@ const Page404 = (props) => {
 };
 
 Page404.propTypes = {
-	children: PropTypes.object, //
+	children: PropTypes.object, 
 };
 
 export default React.memo(Page404);

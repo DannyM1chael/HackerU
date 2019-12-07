@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextArea=(props) => {
+const TextArea = (props) => {
     const {
         name,
         onChange,
-        value="",
+        value = "",
         label,
         placeHolder,
         mandatory = false,

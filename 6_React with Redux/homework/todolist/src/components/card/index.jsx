@@ -6,7 +6,9 @@ export const Card = (props) => {
 
 	return (<div className="card">
 		<div className="card-body">
-			{ children }
+			{ 
+				children 
+			}
 		</div>
 	</div>);
 }

@@ -14,7 +14,7 @@ const ViewTaskModal = (props) => {
 			<small className="text-muted">task description</small>
 			<br />{ data.taskDescription }<br />
 			<small className="text-muted">urgent</small>
-			<br />{ data.taskUrgent ? "Важная задача" : "Обычная задача" }
+			<br />{ data.taskUrgent ? "Important task" : "Ordinary task" }
 		</React.Fragment>
 	);
 };

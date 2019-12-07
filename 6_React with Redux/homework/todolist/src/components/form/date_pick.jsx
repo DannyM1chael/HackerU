@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class DatePick extends React.Component {
+class DatePicker extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -54,7 +54,7 @@ class DatePick extends React.Component {
 	};
 }
 
-DatePick.propTypes = {
+DatePicker.propTypes = {
 	name: PropTypes.string, // name for unput
 	onChange: PropTypes.func, // change handler for input
 	value: PropTypes.string, // value of input
@@ -65,4 +65,4 @@ DatePick.propTypes = {
 	err: PropTypes.bool, // flag about mistake
 };
 
-export default DatePick;
+export default DatePicker;
