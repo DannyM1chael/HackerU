@@ -1,9 +1,16 @@
 import React from 'react';
+import Info from '../components/info/info';
+import Sub from '../components/sub/sub';
+import Partners from '../components/partners/partners';
 
 function Home(props) {
     
     return(
-        <h1>Home</h1>
+        <React.Fragment>
+            <Info />
+            <Partners />
+            <Sub />
+        </React.Fragment>
     )
 }
 
