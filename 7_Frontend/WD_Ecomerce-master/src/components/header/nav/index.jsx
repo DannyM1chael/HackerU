@@ -19,11 +19,9 @@ function Navigation(props) {
 
 	return (
 		<nav className="amado-nav">
-			<ul>
-				{
-					NAVIGATION.map(renderItem)
-				}
-			</ul>
+			{
+				NAVIGATION.map(renderItem)
+			}
 		</nav>
 	);
 

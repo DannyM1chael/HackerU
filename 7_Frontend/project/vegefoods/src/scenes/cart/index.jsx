@@ -1,21 +1,36 @@
 import React from 'react';
-import BackImg from '../components/assets/images/bg_1.jpg';
 import Sub from '../components/sub/sub';
+import BackGround from '../components/background';
+import CartTable from './components/table';
+import Coupon from './components/coupon';
+import Taxes from './components/taxes';
+import Total from './components/total';
+import { useSelector } from 'react-redux';
+
 
 function Cart(props) {
+
+	const cartData = useSelector((store) => store.app.cart);
     
     return(
         <React.Fragment>
-            <div className="hero-wrap hero-bread" style={{backgroundImage: `url(${BackImg})`}}>
+            <BackGround name='Cart' />
+            <section className="ftco-section ftco-cart">
                 <div className="container">
-                    <div className="row no-gutters slider-text align-items-center justify-content-center">
-                        <div className="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
-                            <p className="breadcrumbs"><span className="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
-                            <h1 className="mb-0 bread">My Cart</h1>
+                    <div className="row">
+                        <div className="col-md-12 ftco-animate fadeInUp ftco-animated">
+                            <div className="cart-list">
+                                <CartTable data={ cartData }/>
+                            </div>
                         </div>
                     </div>
+					<div className="row justify-content-end">
+						<Coupon />
+						<Taxes />
+						<Total />
+					</div>
                 </div>
-            </div>
+            </section>
             <Sub />
         </React.Fragment>
     )

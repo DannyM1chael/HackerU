@@ -4,9 +4,9 @@ import { connectRouter } from 'connected-react-router';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 import * as actions from './actions';
 
-import { ReactComponent as Image1 } from "../assets/img/pro-big-1.jpg";
-import { ReactComponent as Image2 } from "../assets/img/pro-big-2.jpg";
-import { ReactComponent as Image3 } from "../assets/img/pro-big-3.jpg";
+import { ReactComponent as Image1 } from "../../src/components/assets/img/product-img/pro-big-1.jpg";
+import { ReactComponent as Image2 } from "../../src/components/assets/img/product-img/pro-big-2.jpg";
+import { ReactComponent as Image3 } from "../../src/components/assets/img/product-img/pro-big-3.jpg";
 
 const dataStub = [
 	{
