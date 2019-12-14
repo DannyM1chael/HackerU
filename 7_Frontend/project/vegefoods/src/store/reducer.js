@@ -38,7 +38,7 @@ const initialState = {
 const rootReducer = createReducer({
     [actions.updateCart]: (state, payload) => ({ ...state, cart: payload }),
     [actions.updateCartCounter]: (state, payload) => { 
-    const filtered = state.cart.filter( item => item.id == payload.id);
+    const filtered = state.cart.filter( item => item.id === payload.id);
     if (!filtered.length || filtered.length > 1) {
         return state;
     }
