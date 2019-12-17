@@ -34,5 +34,4 @@ export const NAVIGATION = [
 		home: true,
 	},
 ];
-// export const BEDS = `${ SHOP }/beds/:code`;
 
