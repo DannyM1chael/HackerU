@@ -2,15 +2,14 @@ import { createReducer } from 'redux-act';
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { reducer as toastrReducer } from 'react-redux-toastr';
-import * as actions from './actions';
-import Product3 from '../scenes/components/assets/images/product-3.jpg';
-import Product4 from '../scenes/components/assets/images/product-4.jpg';
+import * as actions from '../actions';
+import products from '../api/dataProducts'
 
 const dataStub = [
     {
         id: 3,
         img: {
-            small: Product3,
+            small: '',
             large: '',
         },
         title: 'Bell Pepper',
@@ -22,7 +21,7 @@ const dataStub = [
     {
         id: 4,
         img: {
-            small: Product4,
+            small: '',
             large: '',
         },
         title: 'Bell Pepper',
@@ -33,6 +32,9 @@ const dataStub = [
 ]
 const initialState = {
     cart: dataStub,
+    shop: products,
+    home: [],
+    wishlist: []
 }
 
 const rootReducer = createReducer({

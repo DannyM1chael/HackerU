@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Products(props) {
+function FeaturedProducts(props) {
     
     return(
         <div className="container">
@@ -15,4 +15,4 @@ function Products(props) {
     );
 }
 
-export default Products;
+export default FeaturedProducts;

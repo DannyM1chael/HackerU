@@ -3,19 +3,19 @@ import Info from '../components/info/info';
 import Sub from '../components/sub/sub';
 import Partners from '../components/partners/partners';
 import Category from '../../components/category';
-import Products from '../../components/products';
 import Ad from '../../components/ad';
 import Feedback from '../../components/feedback';
-import Slider from './components';
+import FeaturedProducts from '../../components/products_home';
+import AutoPlay from './components/slider';
 
 function Home(props) {
     
     return(
         <React.Fragment>
-            <Slider />
+            <AutoPlay />
             <Info />
             <Category />
-            <Products />
+            <FeaturedProducts />
             <Ad />
             <Feedback />
             <Partners />

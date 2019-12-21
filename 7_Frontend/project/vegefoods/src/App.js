@@ -9,7 +9,7 @@ function App(props) {
     <React.Fragment>
       <Header />
       <Navigation />
-      { props.children }
+        { props.children }
       <Footer />
     </React.Fragment>
   );

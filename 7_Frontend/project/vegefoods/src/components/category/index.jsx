@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import * as URL from '../../router/url';
 import CategoryImg from '../../scenes/components/assets/images/category.jpg';
 import CategoryImg1 from '../../scenes/components/assets/images/category-1.jpg';
 import CategoryImg2 from '../../scenes/components/assets/images/category-2.jpg';
@@ -18,19 +20,19 @@ function Category(props) {
 									<div className="text text-center">
 										<h2>Vegetables</h2>
 										<p>Protect the health of every home</p>
-										<p><a href="#" className="btn btn-primary">Shop now</a></p>
+										<p><Link to={ URL.SHOP } className="btn btn-primary">Shop now</Link></p>
 									</div>
 								</div>
 							</div>
 							<div className="col-md-6">
 								<div className="category-wrap ftco-animate img mb-4 d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg1 })`}}>
 									<div className="text px-3 py-1">
-										<h2 className="mb-0"><a href="#">Fruits</a></h2>
+										<h2 className="mb-0"><Link to="#">Fruits</Link></h2>
 									</div>
 								</div>
 								<div className="category-wrap ftco-animate img d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg2 })`}}>
 									<div className="text px-3 py-1">
-										<h2 className="mb-0"><a href="#">Vegetables</a></h2>
+										<h2 className="mb-0"><Link to="#">Vegetables</Link></h2>
 									</div>
 								</div>
 							</div>
@@ -40,12 +42,12 @@ function Category(props) {
 					<div className="col-md-4">
 						<div className="category-wrap ftco-animate img mb-4 d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg3 })`}}>
 							<div className="text px-3 py-1">
-								<h2 className="mb-0"><a href="#">Juices</a></h2>
+								<h2 className="mb-0"><Link to="#">Juices</Link></h2>
 							</div>		
 						</div>
 						<div className="category-wrap ftco-animate img d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg4 })`}}>
 							<div className="text px-3 py-1">
-								<h2 className="mb-0"><a href="#">Dried</a></h2>
+								<h2 className="mb-0"><Link to="#">Dried</Link></h2>
 							</div>
 						</div>
 					</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Partner1 from '../assets/images/partner-1.png';
 import Partner2 from '../assets/images/partner-2.png';
 import Partner3 from '../assets/images/partner-3.png';
@@ -12,19 +13,19 @@ function Partners(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-sm ftco-animate fadeInUp ftco-animated">
-                        <a href="#" className="partner"><img src={Partner1} className="img-fluid" alt="Colorlib Template" /></a>
+                        <Link to="#" className="partner"><img src={Partner1} className="img-fluid" alt="Colorlib Template" /></Link>
                     </div>
                     <div className="col-sm ftco-animate fadeInUp ftco-animated">
-                        <a href="#" className="partner"><img src={Partner2} className="img-fluid" alt="Colorlib Template" /></a>
+                        <Link to="#" className="partner"><img src={Partner2} className="img-fluid" alt="Colorlib Template" /></Link>
                     </div>
                     <div className="col-sm ftco-animate fadeInUp ftco-animated">
-                        <a href="#" className="partner"><img src={Partner3} className="img-fluid" alt="Colorlib Template" /></a>
+                        <Link to="#" className="partner"><img src={Partner3} className="img-fluid" alt="Colorlib Template" /></Link>
                     </div>
                     <div className="col-sm ftco-animate fadeInUp ftco-animated">
-                        <a href="#" className="partner"><img src={Partner4} className="img-fluid" alt="Colorlib Template" /></a>
+                        <Link to="#" className="partner"><img src={Partner4} className="img-fluid" alt="Colorlib Template" /></Link>
                     </div>
                     <div className="col-sm ftco-animate fadeInUp ftco-animated">
-                        <a href="#" className="partner"><img src={Partner5} className="img-fluid" alt="Colorlib Template" /></a>
+                        <Link to="#" className="partner"><img src={Partner5} className="img-fluid" alt="Colorlib Template" /></Link>
                     </div>
                 </div>
             </div>
