@@ -27,12 +27,12 @@ function Category(props) {
 							<div className="col-md-6">
 								<div className="category-wrap ftco-animate img mb-4 d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg1 })`}}>
 									<div className="text px-3 py-1">
-										<h2 className="mb-0"><Link to="#">Fruits</Link></h2>
+										<h2 className="mb-0"><Link to={ URL.SHOP }>Fruits</Link></h2>
 									</div>
 								</div>
 								<div className="category-wrap ftco-animate img d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg2 })`}}>
 									<div className="text px-3 py-1">
-										<h2 className="mb-0"><Link to="#">Vegetables</Link></h2>
+										<h2 className="mb-0"><Link to={ URL.SHOP }>Vegetables</Link></h2>
 									</div>
 								</div>
 							</div>
@@ -42,12 +42,12 @@ function Category(props) {
 					<div className="col-md-4">
 						<div className="category-wrap ftco-animate img mb-4 d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg3 })`}}>
 							<div className="text px-3 py-1">
-								<h2 className="mb-0"><Link to="#">Juices</Link></h2>
+								<h2 className="mb-0"><Link to={ URL.SHOP }>Juices</Link></h2>
 							</div>		
 						</div>
 						<div className="category-wrap ftco-animate img d-flex align-items-end fadeInUp ftco-animated" style={{backgroundImage: `url(${ CategoryImg4 })`}}>
 							<div className="text px-3 py-1">
-								<h2 className="mb-0"><Link to="#">Dried</Link></h2>
+								<h2 className="mb-0"><Link to={ URL.SHOP }>Dried</Link></h2>
 							</div>
 						</div>
 					</div>

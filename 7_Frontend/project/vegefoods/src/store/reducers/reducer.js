@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 import * as actions from '../actions';
-import products from '../api/dataProducts'
+// import products from '../api/dataProducts'
 
 const dataStub = [
     {
@@ -32,7 +32,7 @@ const dataStub = [
 ]
 const initialState = {
     cart: dataStub,
-    shop: products,
+    shop: [],
     home: [],
     wishlist: []
 }

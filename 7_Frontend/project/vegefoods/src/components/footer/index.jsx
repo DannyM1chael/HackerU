@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as URL from '../../router/url';
+import Social from './social';
+import ScrollTop from './scrollTop';
 
 function Footer(props) {
     
@@ -7,32 +10,24 @@ function Footer(props) {
         <footer className="ftco-footer ftco-section">
       <div className="container">
       	<div className="row">
-      		<div className="mouse">
-						<Link to="#" className="mouse-icon">
-							<div className="mouse-wheel"><span className="ion-ios-arrow-up"></span></div>
-						</Link>
-					</div>
+          <ScrollTop />
       	</div>
         <div className="row mb-5">
           <div className="col-md">
             <div className="ftco-footer-widget mb-4">
               <h2 className="ftco-heading-2">Vegefoods</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-              <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li className="ftco-animate fadeInUp ftco-animated"><Link to="#"><span className="icon-twitter"></span></Link></li>
-                <li className="ftco-animate fadeInUp ftco-animated"><Link to="#"><span className="icon-facebook"></span></Link></li>
-                <li className="ftco-animate fadeInUp ftco-animated"><Link to="#"><span className="icon-instagram"></span></Link></li>
-              </ul>
+                <Social />
             </div>
           </div>
           <div className="col-md">
             <div className="ftco-footer-widget mb-4 ml-md-5">
               <h2 className="ftco-heading-2">Menu</h2>
               <ul className="list-unstyled">
-                <li><Link to="#" className="py-2 d-block">Shop</Link></li>
-                <li><Link to="#" className="py-2 d-block">About</Link></li>
-                <li><Link to="#" className="py-2 d-block">Journal</Link></li>
-                <li><Link to="#" className="py-2 d-block">Contact Us</Link></li>
+                <li><Link to={ URL.SHOP } className="py-2 d-block">Shop</Link></li>
+                <li><Link to={ URL.ABOUT } className="py-2 d-block">About</Link></li>
+                <li><Link to={ URL.BLOG } className="py-2 d-block">Journal</Link></li>
+                <li><Link to={ URL.CONTACT } className="py-2 d-block">Contact Us</Link></li>
               </ul>
             </div>
           </div>
@@ -47,8 +42,8 @@ function Footer(props) {
 	                <li><Link to="#" className="py-2 d-block">Privacy Policy</Link></li>
 	              </ul>
 	              <ul className="list-unstyled">
-	                <li><Link to="#" className="py-2 d-block">FAQs</Link></li>
-	                <li><Link to="#" className="py-2 d-block">Contact</Link></li>
+	                <li><Link to={ URL.CONTACT } className="py-2 d-block">FAQs</Link></li>
+	                <li><Link to={ URL.CONTACT } className="py-2 d-block">Contact</Link></li>
 	              </ul>
 	            </div>
             </div>

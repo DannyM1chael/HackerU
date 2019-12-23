@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AboutImg from '../../scenes/components/assets/images/about.jpg';
+import * as URL from '../../router/url';
 
 function Banner(props) {
     
@@ -22,7 +23,7 @@ function Banner(props) {
 	          <div className="pb-md-5">
 	          	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							<p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							<p><Link to="#" className="btn btn-primary">Shop now</Link></p>
+							<p><Link to={ URL.SHOP } className="btn btn-primary">Shop now</Link></p>
 						</div>
 					</div>
 				</div>

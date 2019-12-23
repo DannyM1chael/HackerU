@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick';
+import * as URL from '../../../router/url';
+import { Link } from 'react-router-dom';
 import BackImg1 from '../../../scenes/components/assets/images/bg_1.jpg';
 import BackImg2 from '../../../scenes/components/assets/images/bg_2.jpg';
 
@@ -17,8 +18,7 @@ export default class AutoPlay extends Component {
     };
     return(
         <section id="home-section" className="hero">
-            <Slider {...settings}>
-                <div class="home-slider owl-carousel">
+                <div className="home-slider owl-carousel">
                     <div className="slider-item" style={{backgroundImage: `url(${BackImg1})`}}>  
                         <div className="overlay"></div>
                         <div className='container'>
@@ -26,13 +26,13 @@ export default class AutoPlay extends Component {
                                 <div className="col-md-12 text-center">
                                     <h1 className="mb-2">We serve Fresh Vegestables &amp; Fruits</h1>
                                     <h2 className="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
-                                    <p><a href="#" className="btn btn-primary">View Details</a></p>
+                                    <p><Link to={ URL.SHOP } className="btn btn-primary">View Details</Link></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="home-slider owl-carousel">
+                <div className="home-slider owl-carousel">
                     <div className="slider-item" style={{backgroundImage: `url(${BackImg2})`}}> 
                         <div className="overlay"></div>
                         <div className='container'>
@@ -40,13 +40,12 @@ export default class AutoPlay extends Component {
                                 <div className="col-sm-12 text-center">
                                     <h1 className="mb-2">100% Fresh &amp; Organic Foods</h1>
                                     <h2 className="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
-                                    <p><a href="#" className="btn btn-primary">View Details</a></p>
+                                    <p><Link to={ URL.SHOP } className="btn btn-primary">View Details</Link></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Slider>
         </section>
         )
     }
