@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import * as URL from '../../router/url';
 import Logo from './logo';
 import CartIcon from './cartIcon';
 import ToggleMenu from './toggle_menu';
-// import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 
-function Navigation(props) {
+const Navigation = (props) => {
 
+	const [isScroll, setIsScroll] = useState(false);
+	const handleScroll = () => {
+		setIsScroll(window.scrollY < 130);
+	}
+
+	useEffect(() => {
+			window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll',() => handleScroll)
+		};
+	}, []);
+	
 	const { NAVIGATION } = URL;
 	const renderItem = (item, index) => {
 		return (
@@ -19,7 +30,11 @@ function Navigation(props) {
 	};
     
     return(
-			<nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<nav className={
+				isScroll ? 
+					`navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light`: 
+					`navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light-scrolled awake`} 
+					id="ftco-navbar">
 				<div className="container">
 					<Logo />
 					<ToggleMenu />

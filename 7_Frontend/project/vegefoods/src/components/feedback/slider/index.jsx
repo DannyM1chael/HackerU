@@ -10,8 +10,8 @@ export default class MultipleItems extends Component {
         slidesToScroll: 3
       };
       return(
-            <div class="carousel-testimony owl-carousel">
-                <div class="item">
+            <div className="carousel-testimony owl-carousel">
+                <div className="item">
                     <div className="testimony-wrap p-4 pb-5">
                         <div className="user-img mb-5">
                             <span className="quote d-flex align-items-center justify-content-center">

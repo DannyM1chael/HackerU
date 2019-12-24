@@ -4,6 +4,7 @@ import Sub from '../components/sub/sub';
 import Feedback from '../../components/feedback';
 import BackGround from '../components/background';
 import Banner from '../../components/banner';
+import Counter from './counter';
 
 function About(props) {
     
@@ -13,6 +14,7 @@ function About(props) {
             <Banner />
             <Sub />
             <Feedback />
+            <Counter/>
             <Info />
         </React.Fragment>
     )

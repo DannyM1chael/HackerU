@@ -11,7 +11,7 @@ export default class ScrollTop extends Component{
     render() {
         return (
             <div className="mouse">
-                <Link onClick={this.scrollToTop} className="mouse-icon">
+                <Link to="#" onClick={this.scrollToTop} className="mouse-icon">
                     <div className="mouse-wheel"><span className="ion-ios-arrow-up"></span></div>
                 </Link>
             </div>
