@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import BackAdImg from '../../scenes/components/assets/images/bg_3.jpg';
+import BackAdImg from '../../../../components/assets/images/bg_3.jpg';
 
 const Countdown = () => {
 

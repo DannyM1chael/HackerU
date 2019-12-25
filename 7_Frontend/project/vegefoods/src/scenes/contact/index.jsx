@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BackGround from '../components/background/index';
+import BackGround from '../../components/background';
 
 
 function Contact(props) {

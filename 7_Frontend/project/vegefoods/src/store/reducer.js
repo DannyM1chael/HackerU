@@ -2,7 +2,7 @@ import { createReducer } from 'redux-act';
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { reducer as toastrReducer } from 'react-redux-toastr';
-import * as actions from '../actions';
+import * as actions from './actions';
 // import products from '../api/dataProducts'
 
 const dataStub = [

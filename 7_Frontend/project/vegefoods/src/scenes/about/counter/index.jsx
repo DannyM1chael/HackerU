@@ -1,5 +1,5 @@
 import React from 'react';
-import AdImg from '../../components/assets/images/bg_3.jpg';
+import AdImg from '../../../components/assets/images/bg_3.jpg';
 
 function Counter(props) {
     

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AboutImg from '../../scenes/components/assets/images/about.jpg';
-import * as URL from '../../router/url';
+import AboutImg from '../../../components/assets/images/about.jpg';
+import * as URL from '../../../router/url';
 
 function Banner(props) {
     

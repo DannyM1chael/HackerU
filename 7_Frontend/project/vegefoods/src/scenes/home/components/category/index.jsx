@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as URL from '../../router/url';
-import CategoryImg from '../../scenes/components/assets/images/category.jpg';
-import CategoryImg1 from '../../scenes/components/assets/images/category-1.jpg';
-import CategoryImg2 from '../../scenes/components/assets/images/category-2.jpg';
-import CategoryImg3 from '../../scenes/components/assets/images/category-3.jpg';
-import CategoryImg4 from '../../scenes/components/assets/images/category-4.jpg';
+import * as URL from '../../../../router/url';
+import CategoryImg from '../../../../components/assets/images/category.jpg';
+import CategoryImg1 from '../../../../components/assets/images/category-1.jpg';
+import CategoryImg2 from '../../../../components/assets/images/category-2.jpg';
+import CategoryImg3 from '../../../../components/assets/images/category-3.jpg';
+import CategoryImg4 from '../../../../components/assets/images/category-4.jpg';
 
 function Category(props) {
     

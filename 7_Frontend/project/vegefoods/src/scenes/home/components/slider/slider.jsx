@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import * as URL from '../../../router/url';
+import * as URL from '../../../../router/url';
 import { Link } from 'react-router-dom';
-import BackImg1 from '../../../scenes/components/assets/images/bg_1.jpg';
-import BackImg2 from '../../../scenes/components/assets/images/bg_2.jpg';
+import BackImg1 from '../../../../components/assets/images/bg_1.jpg';
+import BackImg2 from '../../../../components/assets/images/bg_2.jpg';
 
 export default class AutoPlay extends Component {
     render() {
