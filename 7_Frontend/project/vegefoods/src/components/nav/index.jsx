@@ -10,7 +10,7 @@ const Navigation = (props) => {
 
 	const [isScroll, setIsScroll] = useState(false);
 	const handleScroll = () => {
-		setIsScroll(window.scrollY < 130);
+		setIsScroll(window.scrollY > 130);
 	}
 
 	useEffect(() => {
@@ -30,11 +30,9 @@ const Navigation = (props) => {
 	};
     
     return(
-			<nav className={
-				isScroll ? 
-					`navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light`: 
-					`navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light-scrolled awake`} 
-					id="ftco-navbar">
+			<nav id="ftco-navbar" 
+				 className= { isScroll? "navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light-scrolled sleep awake" :
+				 						"navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"}>
 				<div className="container">
 					<Logo />
 					<ToggleMenu />

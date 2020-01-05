@@ -6,13 +6,13 @@ import Category from '../../scenes/home/components/category';
 import Countdown from '../../scenes/home/components/countdown';
 import Feedback from '../../components/feedback';
 import FeaturedProducts from './components/products_home';
-import AutoPlay from '../../scenes/home/components/slider/slider';
+import AutoSlider from './components/slider';
 
 function Home(props) {
     
     return(
         <React.Fragment>
-            <AutoPlay />
+            <AutoSlider />
             <Info />
             <Category />
             <FeaturedProducts />
