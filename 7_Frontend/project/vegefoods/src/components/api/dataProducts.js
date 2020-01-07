@@ -1,99 +1,99 @@
 export default [
     {
-        id: "1",
+        id: "1a",
         category: "Vegetables",
         title: "Bell Pepper",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-1.jpg"
+        image: ""
     },
     {
-        id: "2",
+        id: "2a",
         category: "Fruits",
         title: "Strawberry",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-2.jpg"
+        image: ""
     },
     {
-        id: "3",
+        id: "3a",
         category: "Vegetables",
         title: "Green Beans",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-3.jpg"
+        image: ""
     },
     {
-        id: "4",
+        id: "4a",
         category: "Vegetables",
         title: "Purple Cabbage",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-4.jpg"
+        image: ""
     },
     {
-        id: "5",
+        id: "5a",
         category: "Vegetables",
         title: "Tomatoe",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-5.jpg"
+        image: ""
     },
     {
-        id: "6",
+        id: "6a",
         category: "Vegetables",
         title: "Brocoli",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-6.jpg"
+        image: ""
     },
     {
-        id: "7",
+        id: "7a",
         category: "Vegetables",
         title: "Carrots",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-7.jpg"
+        image: ""
     },
     {
-        id: "8",
+        id: "8a",
         category: "Juices",
         title: "Fruit Juice",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-8.jpg"
+        image: ""
     },
     {
-        id: "9",
+        id: "9a",
         category: "Vegetables",
         title: "Onion",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-9.jpg"
+        image: ""
     },
     {
-        id: "10",
+        id: "10a",
         category: "Fruits",
         title: "Apple",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-10.jpg"
+        image: ""
     },
     {
-        id: "11",
+        id: "11a",
         category: "Vegetables",
         title: "Garlic",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-11.jpg"
+        image: ""
     },
     {
-        id: "12",
+        id: "12a",
         category: "Vegetables",
         title: "Chilli",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: "src\scenes\components\assets\images\product-12.jpg"
+        image: ""
     },
     
 ]

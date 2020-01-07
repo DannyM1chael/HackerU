@@ -5,15 +5,15 @@ import BackAdImg from '../../../../components/assets/images/bg_3.jpg';
 const Countdown = () => {
 
 const calculateTimeleft = () => {
-    const difference = +new Date('2021-01-01') - +new Date();
+    const difference = +new Date('2020-02-01') - +new Date();
     let timeLeft = {};
 
     if (difference > 0 ) {
         timeLeft = {
-            days: Math.floor(difference / (1000*60*60*24)),
-            hours: Math.floor((difference / (1000*60*60)) %24),
-            minutes: Math.floor((difference / (1000*60)) %60),
-            seconds: Math.floor ((difference / 1000) %60)
+            days: Math.floor(difference / (1000*60*60*24)).toLocaleString('ru', {minimumIntegerDigits: 2}),
+            hours: Math.floor((difference / (1000*60*60)) %24).toLocaleString('ru', {minimumIntegerDigits: 2}),
+            minutes: Math.floor((difference / (1000*60)) %60).toLocaleString('ru', {minimumIntegerDigits: 2}),
+            seconds: Math.floor ((difference / 1000) %60).toLocaleString('ru', {minimumIntegerDigits: 2})
         };
     }
     return timeLeft;
