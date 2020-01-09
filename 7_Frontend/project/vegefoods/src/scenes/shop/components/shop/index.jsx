@@ -1,6 +1,5 @@
 import React from 'react';
 import ProductCategory from '../shop/product_category';
-import { Link } from 'react-router-dom';
 import Product from './product';
 import dataProducts from '../../../../components/api/dataProducts'
 
@@ -11,9 +10,9 @@ function Products(props) {
             <ProductCategory />
             <div className = "container">
                 <div className = "row">
-                        { dataProducts.map((index, id, category, title, price, image) =>{
+                        { dataProducts.map((index, id, category, title, description, price, image) =>{
                             return(
-                                <Product key={ index } id={ id } title={ title } price={ price } image={ image }/>
+                                <Product key={ id } title={ title } price={ price } image={ image }/>
                             )
                         })}
                 </div>

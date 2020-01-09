@@ -34,7 +34,6 @@ const initialState = {
     cart: dataStub,
     shop: [],
     home: [],
-    wishlist: []
 }
 
 const rootReducer = createReducer({

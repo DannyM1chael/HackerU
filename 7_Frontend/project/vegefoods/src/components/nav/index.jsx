@@ -31,7 +31,7 @@ const Navigation = (props) => {
     
     return(
 			<nav id="ftco-navbar" 
-				 className= { isScroll? "navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light-scrolled sleep awake" :
+				 className= { isScroll? "navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled sleep awake":
 				 						"navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"}>
 				<div className="container">
 					<Logo />
