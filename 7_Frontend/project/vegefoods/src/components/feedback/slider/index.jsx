@@ -1,9 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
-import dataClients from '../clients';
 import SlideClient from '../slide_client';
+import { useSelector } from 'react-redux';
 
 const FeedbackSlider = props => {
+
+    const clientData = useSelector((store) => store.app.feedback);
+
+    console.log(clientData)
 
     const settings = {
     dots: false,
@@ -17,15 +21,7 @@ const FeedbackSlider = props => {
 
     return(
         <Slider {...settings} style={{margin: '0 10%'}}>
-                { dataClients.map((index, id, image, text, clientName, position) =>{
-                    return(
-                        <SlideClient key={ id } 
-                                     image={ image } 
-                                     text={ text } 
-                                     clientName={ clientName }
-                                     position={ position }/>
-                    )
-                })}
+                { clientData.map((client, index) => <SlideClient key={ client.id } { ...client }/>)}
         </Slider>
       );
 }

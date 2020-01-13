@@ -13,7 +13,7 @@ const Product = props => {
 
     return(
         <div className="col-md-6 col-lg-3">
-            <div className="product">
+            <div className="product" id= { id }>
                 <div className="img-prod"><img className="img-fluid" src= { image } alt=""/>
                     <div className="overlay"></div>
                 </div>
@@ -21,7 +21,7 @@ const Product = props => {
                     <h3><div> { title } </div></h3>
                     <div className="d-flex">
                         <div className="pricing">
-                            <p className="price"><span className="mr-2 price">${ price }</span></p>
+                            <p className="price"><span className="mr-2 price">${ price }.00</span></p>
                         </div>
                     </div>
                     <CartButton />

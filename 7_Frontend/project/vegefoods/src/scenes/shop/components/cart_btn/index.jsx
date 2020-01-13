@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function CartButton(props) {
+
     return(
         <div className="bottom-area d-flex px-3">
             <div className="m-auto d-flex">

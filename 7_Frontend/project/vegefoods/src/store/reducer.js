@@ -3,37 +3,17 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 import * as actions from './actions';
-// import products from '../api/dataProducts'
+import products from '../components/api/dataProducts';
+import clients from '../components/api/dataClients';
+import dataStub from '../components/api/dataStub';
 
-const dataStub = [
-    {
-        id: 3,
-        img: {
-            small: '',
-            large: '',
-        },
-        title: 'Bell Pepper',
-        price: 4.90,
-        cnt: 1, 
-        total: 4.90,
-    },
-
-    {
-        id: 4,
-        img: {
-            small: '',
-            large: '',
-        },
-        title: 'Bell Pepper',
-        price: 15.70,
-        cnt: 1, 
-        total: 15.70,
-    }
-]
 const initialState = {
+    home: products,
+    shop: products,
     cart: dataStub,
-    shop: [],
-    home: [],
+    feedback: clients,
+    total: 0
+    
 }
 
 const rootReducer = createReducer({
@@ -48,6 +28,9 @@ const rootReducer = createReducer({
         ...state, 
         cart: [ ...state.cart ],
         };   
+    },
+    [actions.addToCart]: (state, payload) => {
+        console.log(state, payload)
     }
 }, initialState);
 

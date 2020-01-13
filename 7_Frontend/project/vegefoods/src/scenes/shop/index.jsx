@@ -1,14 +1,14 @@
 import React from 'react';
 import Sub from '../../components/sub/sub';
 import BackGround from '../../components/background';
-import Products from '../shop/components/shop/index';
+import ProductsPage from './components/products';
 
 function Shop(props) {
     
     return(
         <React.Fragment>
             <BackGround name='Products' />
-            <Products />
+            <ProductsPage />
             <Sub />
         </React.Fragment>
     )

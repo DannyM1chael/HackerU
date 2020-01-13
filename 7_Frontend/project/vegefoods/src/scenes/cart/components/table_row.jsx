@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 function Row({ id, img, title, price, cnt, max }) {
 
-
     const cartData = useSelector((store) => store.app.cart);
 
     let subTotal = 0;

@@ -1,3 +1,16 @@
+import Product1 from '../assets/images/product-1.jpg';
+import Product2 from '../assets/images/product-2.jpg';
+import Product3 from '../assets/images/product-3.jpg';
+import Product4 from '../assets/images/product-4.jpg';
+import Product5 from '../assets/images/product-5.jpg';
+import Product6 from '../assets/images/product-6.jpg';
+import Product7 from '../assets/images/product-7.jpg';
+import Product8 from '../assets/images/product-8.jpg';
+import Product9 from '../assets/images/product-9.jpg';
+import Product10 from '../assets/images/product-10.jpg';
+import Product11 from '../assets/images/product-11.jpg';
+import Product12 from '../assets/images/product-12.jpg';
+
 export default [
     {
         id: "1a",
@@ -6,7 +19,7 @@ export default [
         title: "Bell Pepper",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product1
     },
     {
         id: "2a",
@@ -15,7 +28,7 @@ export default [
         title: "Strawberry",
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product2
     },
     {
         id: "3a",
@@ -24,7 +37,7 @@ export default [
         featured: true,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product3
     },
     {
         id: "4a",
@@ -33,7 +46,7 @@ export default [
         featured: true,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product4
     },
     {
         id: "5a",
@@ -42,7 +55,7 @@ export default [
         featured: true,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product5
     },
     {
         id: "6a",
@@ -51,7 +64,7 @@ export default [
         featured: true,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product6
     },
     {
         id: "7a",
@@ -60,7 +73,7 @@ export default [
         featured: true,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product7
     },
     {
         id: "8a",
@@ -69,7 +82,7 @@ export default [
         featured: true,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product8
     },
     {
         id: "9a",
@@ -78,7 +91,7 @@ export default [
         featured: false,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product9
     },
     {
         id: "10a",
@@ -87,7 +100,7 @@ export default [
         featured: false,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product10
     },
     {
         id: "11a",
@@ -96,7 +109,7 @@ export default [
         featured: false,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product11
     },
     {
         id: "12a",
@@ -105,7 +118,7 @@ export default [
         featured: false,
         description: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.",
         price: 120,
-        image: ""
+        image: Product12
     },
     
 ]

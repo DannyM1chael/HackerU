@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function ProductCategory(props) {
     
     return(
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" style={{margin: '0'}}>
             <div className="col-md-10 mb-5 text-center">
                 <ul className="product-category">
                     <li><Link to="#" className = "active">All</Link></li>

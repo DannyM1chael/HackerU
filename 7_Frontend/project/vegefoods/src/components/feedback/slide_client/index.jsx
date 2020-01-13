@@ -11,7 +11,7 @@ const SlideClient = props => {
 
     return(
           <div className="owl-item active center" style={{display: 'flex'}}>
-            <div className="item">
+            <div className="item" id={ id }>
                 <div className="testimony-wrap p-4 pb-5">
                   <div className="user-img mb-5" style={{backgroundImage: `url${ image }`}}>
                     <span className="quote d-flex align-items-center justify-content-center">
