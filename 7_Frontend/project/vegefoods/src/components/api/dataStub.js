@@ -3,7 +3,7 @@ import Product3 from '../assets/images/product-3.jpg';
 
 export default [
     {
-        id: '1a',
+        id: '1',
         image: Product1,
         title: 'Bell Pepper',
         price: 4.90,
@@ -12,7 +12,7 @@ export default [
     },
 
     {
-        id: '4a',
+        id: '4',
         image: Product3,
         title: 'Purple Cabbage',
         price: 15.70,

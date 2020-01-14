@@ -40,14 +40,10 @@ function Counter(props) {
 
 
 	return (
-        
 		<td className="quantity">
 			<div className="qty-btn d-flex">
 				<div className="input-group mb-3">
-						<span
-							className="qty-minus"
-				      onClick={handleDecrement}
-						>
+						<span className="qty-minus" onClick={ handleDecrement }>
 							<i className="fa fa-minus" aria-hidden="true"></i>
 						</span>
 					<input
@@ -60,9 +56,7 @@ function Counter(props) {
 						value={ cnt }
 						onChange={ handleChange }
 					/>
-					<span
-						className="qty-plus"
-			      onClick={ handleIncrement }>
+					<span className="qty-plus" onClick={ handleIncrement }>
 						<i className="fa fa-plus" aria-hidden="true"></i>
 					</span>
 				</div>

@@ -7,8 +7,6 @@ const FeedbackSlider = props => {
 
     const clientData = useSelector((store) => store.app.feedback);
 
-    console.log(clientData)
-
     const settings = {
     dots: false,
     infinite: true,

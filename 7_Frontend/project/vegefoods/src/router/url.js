@@ -5,6 +5,8 @@ export const ABOUT = '/about';
 export const BLOG= '/blog';
 export const CONTACT= '/contact';
 export const CART = '/cart';
+export const PRODUCT_SINGLE = '/product_single';
+export const CHECKOUT = '/checkout';
 
 export const NAVIGATION = [
 	{

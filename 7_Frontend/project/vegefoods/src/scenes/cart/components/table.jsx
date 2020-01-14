@@ -18,7 +18,7 @@ function CartTable(props) {
             </thead>
             <tbody>
                 {
-                    !!data.length && data.map((item, index) => <Row { ...item } />)
+                    !!data.length && data.map((product, index) => <Row key={ product.id }{ ...product } />)
                 }   
             </tbody>
         </table>

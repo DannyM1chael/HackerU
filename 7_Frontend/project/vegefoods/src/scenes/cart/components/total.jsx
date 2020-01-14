@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import * as URL from '../../../router/url';
 
 function Total(props) {
 
@@ -9,7 +11,7 @@ function Total(props) {
     let discount;
     let summTotal;
     let summFix;
-	cartData.forEach( item => {
+	cartData.map( item => {
 		summ += item.price * item.cnt;
         cnt += item.cnt;
         summFix = (summ).toFixed(2);
@@ -39,7 +41,7 @@ function Total(props) {
                     <span>${ summTotal }</span>
                 </p>
             </div>
-            <p><a href="checkout.html" className="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+            <p><Link to= { URL.CHECKOUT } className="btn btn-primary py-3 px-4">Proceed to Checkout</Link></p>
         </div>
     )
 }
