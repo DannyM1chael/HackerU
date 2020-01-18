@@ -8,47 +8,38 @@ import clients from '../components/api/dataClients';
 import dataStub from '../components/api/dataStub';
 
 const initialState = {
+    home: products,
     shop: products,
-    cart: [],
+    cart: dataStub,
     feedback: clients,
-    total: 0
-    
+    total: 0,
+    volume: 600
 }
 
 const rootReducer = createReducer({
     [actions.updateCart]: (state, payload) => ({ ...state, cart: payload }),
     [actions.updateCartCounter]: (state, payload) => { 
     const filtered = state.cart.filter( product => product.id === payload.id);
-    if (!filtered.length || filtered.length > 1) {
-        return state;
-    }
-    filtered[0].cnt = payload.cnt;
+    filtered[0].quantity = payload.quantity;
     return {
         ...state, 
         cart: [ ...state.cart ],
         };   
     },
-    [actions.addToCart]: (state, payload) => {
-        let addedProduct = state.shop.find(product => product.id === payload.id);
-        let existedProduct = state.cart.find( product => payload.id === product.id);
-        if (existedProduct) {
-            addedProduct += 1;
-            return {
-                ...state,
-                total: state.total + addedProduct.price
-            }
+    [actions.updateCartTotal]: (state) => {
+        const cartTotal = state.cart.reduce((total, product) => total + product.quantity, 0);
+        return {
+            ...state,
+            cart: [...state.cart],
+            total: cartTotal
         }
-        else {
-            addedProduct = 1;
-            let newTotal = state.total + addedProduct.price;
-
-            return {
-                ...state,
-                cart: [...state.cart, addedProduct],
-                total: newTotal
-            }
-        }
-    }
+    },
+    [actions.deleteItemFromCart]: (state, payload) => {
+        const filtered = state.cart.filter( product => product.id !== payload.id);
+		return { 
+            ...state, 
+            cart: [...filtered] }
+	},
 }, initialState);
 
 export default history => combineReducers({

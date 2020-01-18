@@ -21,10 +21,10 @@ const Product = props => {
                     <h3><div> { title } </div></h3>
                     <div className="d-flex">
                         <div className="pricing">
-                            <p className="price"><span className="mr-2 price">${ price.toFixed(2) }</span></p>
+                            <p className="price"><span>${ price.toFixed(2) }</span></p>
                         </div>
                     </div>
-                    <CartButton />
+                    <CartButton id= { id }/>
                 </div>
             </div>
         </div>

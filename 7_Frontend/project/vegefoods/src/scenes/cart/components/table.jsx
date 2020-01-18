@@ -1,7 +1,10 @@
 import React from 'react';
-import Row from './table_row'
+import Row from './table_row';
+import EmptyCart from './empty';
+import { useSelector } from 'react-redux';
 
 function CartTable(props) {
+    const total = useSelector((store) => store.app.total)
     const { data=[] } = props;
 
     return(
@@ -18,8 +21,9 @@ function CartTable(props) {
             </thead>
             <tbody>
                 {
-                    !!data.length && data.map((product, index) => <Row key={ product.id }{ ...product } />)
-                }   
+                    data.length > 0 ? data.map((product, index) => <Row key={ index }{ ...product } />)
+                                    : <EmptyCart />
+                } 
             </tbody>
         </table>
     )
