@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 function ProductPage(props) {
+    const { id, quantity } = props;
 
     const productData = useSelector(store => store.app.shop);
     const volumeData = useSelector(store => store.app.volume);
@@ -47,7 +48,7 @@ function ProductPage(props) {
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <Counter id={ productData.id } quantity={ productData.quantity } />
+                                                <Counter id={ id } quantity={ quantity } />
                                             </tr>
                                         </tbody>
                                     </table>
@@ -57,7 +58,7 @@ function ProductPage(props) {
                                     <p style={{color: '#000'}}> { volumeData } kg available</p>
                                 </div>
                             </div>
-                            <AddToCartBtn id={ productData.id }/>
+                            <AddToCartBtn id={ id }/>
                         </div>
                     </div>
                 </div>

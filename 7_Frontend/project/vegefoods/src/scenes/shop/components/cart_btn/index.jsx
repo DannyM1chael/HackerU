@@ -13,17 +13,18 @@ function CartButton(props) {
     const dispatcher = useDispatch();
 
     const handleAddToCart = () =>{
-        const addedProduct = cartData.filter(product => product.id == id);
+        const addedProduct = shopData.find(product => product.id === id);
+        const existedProduct = cartData.find(product => id === product.id)
 
-        if(addedProduct[0]){
+        if(existedProduct){
             dispatcher({
                 type: updateCartCounter.getType(),
-                payload:{id, quantity: addedProduct[0].quantity + 1},
+                payload:{id, quantity: existedProduct.quantity + 1},
             })
         }else{
             dispatcher({
                 type: updateCart.getType(),
-                payload: [...cartData]
+                payload: [...cartData, addedProduct]
             })
         }
         dispatcher({

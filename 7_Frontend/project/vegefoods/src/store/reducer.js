@@ -5,12 +5,11 @@ import { reducer as toastrReducer } from 'react-redux-toastr';
 import * as actions from './actions';
 import products from '../components/api/dataProducts';
 import clients from '../components/api/dataClients';
-import dataStub from '../components/api/dataStub';
 
 const initialState = {
     home: products,
     shop: products,
-    cart: dataStub,
+    cart: [],
     feedback: clients,
     total: 0,
     volume: 600
