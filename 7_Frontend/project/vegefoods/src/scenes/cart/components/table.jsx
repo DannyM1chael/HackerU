@@ -21,7 +21,7 @@ function CartTable(props) {
             </thead>
             <tbody>
                 {
-                    data.length > 0 ? data.map((product, index) => <Row key={ index }{ ...product } />)
+                    total > 0 ? data.map((product, index) => <Row key={ index }{ ...product } />)
                                     : <EmptyCart />
                 } 
             </tbody>

@@ -8,6 +8,8 @@ function CartButton(props) {
     const{ id } = props;
 
     const cartData = useSelector(store => store.app.cart)
+    const shopData = useSelector(store => store.app.shop)
+
     const dispatcher = useDispatch();
 
     const handleAddToCart = () =>{
@@ -21,7 +23,7 @@ function CartButton(props) {
         }else{
             dispatcher({
                 type: updateCart.getType(),
-                payload: { id }
+                payload: [...cartData]
             })
         }
         dispatcher({

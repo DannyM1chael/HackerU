@@ -3,7 +3,7 @@ import Product4 from '../assets/images/product-4.jpg';
 
 export default [
     {
-        id: 101,
+        id: 1,
         category: "Vegetables",
         isFeatured: true,
         title: "Bell Pepper",
@@ -14,7 +14,7 @@ export default [
     },
 
     {
-        id: 401,
+        id: 4,
         category: "Vegetables",
         title: "Purple Cabbage",
         isFeatured: true,

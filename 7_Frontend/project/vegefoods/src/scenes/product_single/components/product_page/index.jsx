@@ -10,15 +10,17 @@ function ProductPage(props) {
     const productData = useSelector(store => store.app.shop);
     const volumeData = useSelector(store => store.app.volume);
 
+    console.log(productData)
+
     return(
         <React.Fragment>
             <section className="ftco-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 mb-5 ftco-animate fadeInUp ftco-animated">
-                            <Link to="images/product-1.jpg" className="image-popup"><img src={ productData.image } className="img-fluid" alt=""/></Link>
+                        <div className="col-lg-6 mb-5">
+                            <Link to="#" className="image-popup"><img src={ productData.image } className="img-fluid" alt=""/></Link>
                         </div>
-                        <div className="col-lg-6 product-details pl-md-5 ftco-animate fadeInUp ftco-animated">
+                        <div className="col-lg-6 product-details pl-md-5">
                             <h3>{ productData.title }</h3>
                             <div className="rating d-flex">
                                 <p className="text-left mr-4">
