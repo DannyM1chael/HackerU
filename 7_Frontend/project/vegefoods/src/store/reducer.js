@@ -19,7 +19,6 @@ const rootReducer = createReducer({
     [actions.updateCart]: (state, payload) => ({ ...state, cart: payload }),
     [actions.updateCartCounter]: (state, payload) => { 
     const filtered = state.cart.filter( product => product.id === payload.id);
-    console.log(filtered)
     filtered[0].quantity = payload.quantity;
     return {
         ...state, 
@@ -28,7 +27,6 @@ const rootReducer = createReducer({
     },
     [actions.updateCartTotal]: (state) => {
         const cartTotal = state.cart.reduce((total, product) => total + product.quantity, 0);
-        console.log(cartTotal)
         return {
             ...state,
             cart: [...state.cart],
@@ -37,7 +35,6 @@ const rootReducer = createReducer({
     },
     [actions.deleteItemFromCart]: (state, payload) => {
         const filtered = state.cart.filter( product => product.id !== payload.id);
-        console.log(filtered)
 		return { 
             ...state, 
             cart: [...filtered] }

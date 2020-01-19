@@ -11,8 +11,6 @@ function ProductPage(props) {
     const productData = useSelector(store => store.app.shop);
     const volumeData = useSelector(store => store.app.volume);
 
-    console.log(productData)
-
     return(
         <React.Fragment>
             <section className="ftco-section">
