@@ -21,7 +21,7 @@ function CartButton(props) {
         }else{
             dispatcher({
                 type: updateCart.getType(),
-                payload: [...cartData]
+                payload: { id }
             })
         }
         dispatcher({

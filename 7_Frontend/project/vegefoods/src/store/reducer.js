@@ -10,7 +10,7 @@ import dataStub from '../components/api/dataStub';
 const initialState = {
     home: products,
     shop: products,
-    cart: dataStub,
+    cart: [],
     feedback: clients,
     total: 0,
     volume: 600
@@ -27,10 +27,10 @@ const rootReducer = createReducer({
         };   
     },
     [actions.updateCartTotal]: (state) => {
-        const cartTotal = state.cart.reduce((total, product) => total + product.quantity, 0);
+        const cartTotal = state.shop.reduce((total, product) => total + product.quantity, 0);
         return {
             ...state,
-            cart: [...state.cart],
+            cart: [...state.shop],
             total: cartTotal
         }
     },
