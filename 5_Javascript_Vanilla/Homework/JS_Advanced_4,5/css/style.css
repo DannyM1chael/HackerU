@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  background: #191919;
+  min-height: 100vh;
+  font-family: sans-serif; }
+  .container section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in 0.8s;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .container section:target {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10; }
+    .container section#first {
+      background-image: url("../img/wood.jpg");
+      background-size: cover;
+      background-position: center; }
+    .container section#second {
+      background-image: url("../img/blossom.jpg");
+      background-size: cover;
+      background-position: center; }
+    .container section#third {
+      background-image: url("../img/architecture.jpg");
+      background-size: cover;
+      background-position: center; }
+    .container section#fourth {
+      background-image: url("../img/lights.jpg");
+      background-size: cover;
+      background-position: center; }
+    .container section h1 {
+      color: white;
+      font-size: 50px;
+      text-transform: uppercase;
+      opacity: 1; }
+      .container section h1:target {
+        opacity: 0;
+        animation: 2s fadeIn forwards 0.5s; }
+
+nav {
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+  background: #0b1419; }
+  nav a {
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center; }
+
+@keyframes fadeIn {
+  100% {
+    opacity: 0; } }
+
+/*# sourceMappingURL=style.css.map */
