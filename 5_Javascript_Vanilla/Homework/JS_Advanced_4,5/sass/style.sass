@@ -3,6 +3,10 @@
     padding: 0
     box-sizing: border-box
 
+.poorVisionMode
+    filter: contrast(200%)
+    text-transform: uppercase
+
 .container
     background: #191919
     min-height: 100vh
@@ -43,7 +47,6 @@
         h1
             color: white
             font-size: 50px
-            text-transform: uppercase
             opacity: 1
             &:target
                 opacity: 0
@@ -58,14 +61,33 @@ nav
     flex-direction: column
     height: 100vh
     background: #0b1419
-
+    button
+        font-size: 40px
+        color: white
+        background: #0b1419
+        border-radius: 10%
+        outline: none
+        cursor: pointer
     a
         font-size: 40px
         color: white
         text-decoration: none
         padding: 20px
         text-align: center
-        
+#poorVision:hover::after
+        content: attr(data-title)
+        position: absolute
+        left: 0
+        top: 12%
+        z-index: 1
+        background: rgba(255, 255, 230, 0.9)
+        font-size: 11px
+        text-transform: uppercase
+        color: #0b1419
+        padding: 5px 10px
+        border: 1px solid #333
+        border-radius: 10%
+
 @keyframes fadeIn
     100%
         opacity: 0
