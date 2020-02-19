@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import './App.css';
-import styled from 'styled-components/macro';
+import React, { Component } from 'react';
+import "styled-components/macro";
 
 const fruits = [
   'Apple',
@@ -11,65 +10,79 @@ const fruits = [
   'Lemon',
   'Pear',
   'Pineapple',
-];
+]
+const stagger = 100;
 
-const StyledItem = styled.div`
-  width: 252px;
-  padding: 24px;
-  color: #1c1c1c;
-  background: #aaaaaa;
-  border-bottom: 1px solid #939393;
-  transform: ${props => props.visible ? 'translateX(0%)' : 'translateX(100%)'}
-  transition: transform 0.5s ease-in-out;
-  `;
-  
-const StyledButton = styled.button`
-  width: 300px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 0;
-  font-weight: bold;
-  &::-moz-focus-inner {
-  border: 0;
+class Item extends Component {
+  render() {
+    return (
+      <div css={`
+        width: 252px;
+        padding: 24px;
+        color: #1c1c1c;
+        background: #aaaaaa;
+        border-bottom: 1px solid #939393;
+        transform: ${this.props.isVisible ? 'translateX(100%)' : 'translate(0)'};
+        transition: transform 0.5s ${stagger * this.props.index}ms ease-in-out;
+      `}>
+        {this.props.name}
+      </div>
+    );
   }
-  &:hover {
-  background-color: #cccccc;
-  }
-  &:active {
-  background-color: #eae9e9;
-  }`;
-
-const StyledApp = styled.div`
-  width: 300px;
-  overflow: hidden;
-  background-color: #5e5c5c;`
-
-function Item(props) {
-  return(
-    <StyledItem>
-      { props.name }
-    </StyledItem>
-  )
-};
-
-function App() {
-
-  const [visible, setVisible] = useState(true);
-  console.log(visible)
-
-  return (
-    <StyledApp>
-        <StyledButton onClick={()=>setVisible(!visible)}> 
-          TOGGLE
-        </StyledButton>
-          {fruits.map((fruits, index) => {
-            return(
-              <Item key={ index } name={ fruits } />
-            )
-          })}
-    </StyledApp>
-  );
 }
 
-export default App;
+export default class App extends Component {
+  state = {
+    isVisible: false,
+  }
+  render() {
+
+    return (
+      <div css={`
+        width: 300px;
+        overflow: hidden;
+        background-color: #5e5c5c;
+      `}>
+
+        <button
+          onClick={this.toggle}
+          css={`
+            width: 300px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 0;
+            font-weight: bold;
+            &::-moz-focus-inner {
+              border: 0;
+            }
+            &:hover {
+              background-color: #cccccc;
+            }
+            &:active {
+              background-color: #eae9e9;
+            }
+          `}
+        >
+          TOGGLE
+        </button>
+
+        {fruits.map((fruit, index) => {
+          return (
+            <Item
+              key={index}
+              isVisible={this.state.isVisible}
+              index={index}
+              name={fruit}
+            />
+          )
+        })}
+
+      </div>
+    );
+  }
+  toggle = () => {
+    this.setState({ isVisible: !this.state.isVisible })
+  }
+}
+
