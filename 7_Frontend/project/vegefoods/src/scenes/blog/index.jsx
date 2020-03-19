@@ -1,5 +1,5 @@
 import React from 'react';
-import BackGround from '../components/background';
+import BackGround from '../../components/background';
 
 function Blog(props) {
     

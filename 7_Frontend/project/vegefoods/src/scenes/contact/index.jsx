@@ -1,5 +1,6 @@
 import React from 'react';
-import BackGround from '../components/background/index';
+import { Link } from 'react-router-dom';
+import BackGround from '../../components/background';
 
 
 function Contact(props) {
@@ -18,17 +19,17 @@ function Contact(props) {
                         </div>
                         <div className="col-md-3 d-flex">
                             <div className="info bg-white p-4">
-                                <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                <p><span>Phone:</span> <Link to="tel://1234567920">+ 1235 2355 98</Link></p>
                             </div>
                         </div>
                         <div className="col-md-3 d-flex">
                             <div className="info bg-white p-4">
-                                <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                <p><span>Email:</span> <Link to="mailto:info@yoursite.com">info@yoursite.com</Link></p>
                             </div>
                         </div>
                         <div className="col-md-3 d-flex">
                             <div className="info bg-white p-4">
-                                <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                <p><span>Website</span> <Link to="#">yoursite.com</Link></p>
                             </div>
                         </div>
                         </div>

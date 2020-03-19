@@ -13,15 +13,19 @@ const About = lazy(() => import('../scenes/about'));
 const Blog = lazy(() => import('../scenes/blog'));
 const Contact = lazy(() => import('../scenes/contact'));
 const Cart = lazy(() => import('../scenes/cart'));
+const Product_single = lazy(() => import('../scenes/product_single'))
+const Checkout = lazy(() => import('../scenes/checkout'))
 
 
 export default (
     <Switch>
         <Route exact path = '/' component={ Home } />
         <Route exact path = { URL.SHOP } component={ Shop } />
+        <Route exact path = { URL.PRODUCT_SINGLE } component={ Product_single } />
         <Route exact path = { URL.ABOUT } component={ About } />
         <Route exact path = { URL.BLOG } component={ Blog } />
         <Route exact path = { URL.CONTACT } component={ Contact } />
         <Route exact path = { URL.CART } component={ Cart } />
+        <Route exact path = { URL.CHECKOUT } component={ Checkout } />
     </Switch>
 )

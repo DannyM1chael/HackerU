@@ -1,13 +1,20 @@
 import React from 'react';
-import BackImg from '../components/assets/images/bg_1.jpg';
-import Info from '../components/info/info';
-import BackGround from '../components/background';
+import Info from '../../components/info/info';
+import Sub from '../../components/sub/sub';
+import Feedback from '../../components/feedback';
+import BackGround from '../../components/background';
+import Banner from '../../scenes/about/banner';
+import Counter from './counter';
 
 function About(props) {
     
     return(
         <React.Fragment>
             <BackGround name='About' />
+            <Banner />
+            <Sub />
+            <Feedback />
+            <Counter/>
             <Info />
         </React.Fragment>
     )

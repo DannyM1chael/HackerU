@@ -55,10 +55,10 @@ cookieBtn.addEventListener('click', function(){
 
 })
 
-if(getCookie('darkMode')){
-	document.querySelector('.content').classList.add('darkMode');
+// if(getCookie('darkMode')){
+// 	document.querySelector('.content').classList.add('darkMode');
 
-}
+// }
 
 function setMode(){
 	if (getCookie('darkMode')){

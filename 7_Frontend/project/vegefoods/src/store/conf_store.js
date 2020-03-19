@@ -4,8 +4,10 @@ import { routerMiddleware } from 'connected-react-router';
 import { assignAll } from 'redux-act';
 import * as actions from './actions';
 import createRootReducer from './reducer';
+import thunk from 'redux-thunk';
 
 export const history = createBrowserHistory();
+export const middlewares = [ thunk, routerMiddleware(history) ];
 
 // const OldConfigureStore = createStore(rootReducer);
 
@@ -14,10 +16,7 @@ export default function configureStore(preloadedState) {
 		createRootReducer(history),
 		preloadedState,
 		compose(
-			applyMiddleware(
-				routerMiddleware(history),
-				// ... other middlewares ...
-			),
+			applyMiddleware(...middlewares),
 		),
 	);
 

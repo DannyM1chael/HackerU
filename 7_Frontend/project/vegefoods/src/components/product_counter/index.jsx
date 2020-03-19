@@ -1,31 +1,42 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { updateCartCounter } from '../../store/actions';
+import { updateCartCounter, updateCartTotal, deleteItemFromCart } from '../../store/actions';
 
 
 function Counter(props) {
-	const dispatcher = useDispatch();
-	const { id, cnt, max } = props;
+	const { 
+		id, 
+		quantity
+	 } = props;
 
+	const dispatcher = useDispatch();
+	
 	const handleIncrement = () => {
-		if (cnt + 1 > max) {
-			return null;
-		}
 		dispatcher({
 			type: updateCartCounter.getType(),
-			payload: {id, cnt: cnt + 1},
+			payload: {id, quantity: quantity + 1},
 		});
+		dispatcher({
+			type: updateCartTotal.getType()
+		})
 	};
 
 	const handleDecrement = () => {
-        if (cnt - 1 < 1) {
-            return null;
-        }
+        if (quantity - 1 == 0) {
+           dispatcher({
+			   type: deleteItemFromCart.getType(),
+			   payload: { id }
+		   });
+        } else {
+			dispatcher({
+				type: updateCartCounter.getType(),
+				payload: {id, quantity: quantity - 1},
+			});
+		}
 		dispatcher({
-			type: updateCartCounter.getType(),
-			payload: {id, cnt: cnt - 1},
-		});
+			type: updateCartTotal.getType()
+		})
 	};
 
 	const handleChange = (e) => {
@@ -34,35 +45,29 @@ function Counter(props) {
 
 		dispatcher({
 			type: updateCartCounter.getType(),
-			payload: {id, cnt: value},
+			payload: {id, quantity: value},
 		});
+		dispatcher({
+			type: updateCartTotal.getType()
+		})
 	};
 
 
 	return (
-        
 		<td className="quantity">
 			<div className="qty-btn d-flex">
 				<div className="input-group mb-3">
-						<span
-							className="qty-minus"
-				      onClick={handleDecrement}
-						>
+						<span className="qty-minus" onClick={ handleDecrement }>
 							<i className="fa fa-minus" aria-hidden="true"></i>
 						</span>
 					<input
 						type="number"
 						className="quantity form-control input-number"
-						step="1"
-						min="1"
-						max="100"
 						name="quantity"
-						value={ cnt }
+						value={ quantity }
 						onChange={ handleChange }
 					/>
-					<span
-						className="qty-plus"
-			      onClick={ handleIncrement }>
+					<span className="qty-plus" onClick = { handleIncrement }>
 						<i className="fa fa-plus" aria-hidden="true"></i>
 					</span>
 				</div>
@@ -73,7 +78,7 @@ function Counter(props) {
 
 Counter.propTypes = {
 	id: PropTypes.number,
-	cnt: PropTypes.number,
+	quantity: PropTypes.number,
 	max: PropTypes.number,
 };
 

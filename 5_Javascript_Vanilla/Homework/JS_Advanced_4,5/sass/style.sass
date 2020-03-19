@@ -1,0 +1,95 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.poorVisionMode
+    filter: contrast(200%)
+    text-transform: uppercase
+
+.container
+    background: #191919
+    min-height: 100vh
+    font-family: sans-serif
+    section
+        position: absolute
+        top: 0
+        height: 100vh
+        width: 0
+        opacity: 0
+        transition: all ease-in .8s
+        display: flex
+        justify-content: center
+        align-items: center
+        &:target
+            opacity: 1
+            position: absolute
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 10
+        &#first
+            background-image: url('../img/wood.jpg')
+            background-size: cover
+            background-position: center
+        &#second
+            background-image: url('../img/blossom.jpg')
+            background-size: cover
+            background-position: center
+        &#third
+            background-image: url('../img/architecture.jpg')
+            background-size: cover
+            background-position: center
+        &#fourth
+            background-image: url('../img/lights.jpg')
+            background-size: cover
+            background-position: center
+        h1
+            color: white
+            font-size: 50px
+            opacity: 1
+            &:target
+                opacity: 0
+                animation: 2s fadeIn forwards .5s
+
+nav
+    position: fixed
+    left: 0
+    z-index: 50
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    height: 100vh
+    background: #0b1419
+    button
+        font-size: 40px
+        color: white
+        background: #0b1419
+        border-radius: 10%
+        outline: none
+        cursor: pointer
+    a
+        font-size: 40px
+        color: white
+        text-decoration: none
+        padding: 20px
+        text-align: center
+#poorVision:hover::after
+        content: attr(data-title)
+        position: absolute
+        left: 0
+        top: 12%
+        z-index: 1
+        background: rgba(255, 255, 230, 0.9)
+        font-size: 11px
+        text-transform: uppercase
+        color: #0b1419
+        padding: 5px 10px
+        border: 1px solid #333
+        border-radius: 10%
+
+@keyframes fadeIn
+    100%
+        opacity: 0
+
+        

@@ -1,28 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import * as URL from '../../../router/url';
 
 function Total(props) {
 
     const cartData = useSelector((store) => store.app.cart);
-    let summ = 0;
-    let cnt = 0;
-    let discount = 0;
-    let summTotal = 0;
-	cartData.forEach( item => {
-		summ += item.price * item.cnt;
-        cnt += item.cnt;
-        discount = (summ * 0.15).toFixed(2);
-        summTotal = (summ - discount).toFixed(2);
-        
-	});
-    
+    const [subTotal, setSubTotal] = useState(0);
+
+    useEffect(() => {
+        let subTotal = cartData.reduce((sum, product) => sum + product.price * product.quantity, 0);
+        setSubTotal(subTotal);
+    }, [cartData]);
+
     return(
         <div className="col-lg-4 mt-5 cart-wrap ftco-animate fadeInUp ftco-animated">
             <div className="cart-total mb-3">
                 <h3>Cart Totals</h3>
                 <p className="d-flex">
                     <span>Subtotal</span>
-                    <span>${ summ }</span>
+                    <span>${ subTotal.toFixed(2) }</span>
                 </p>
                 <p className="d-flex">
                     <span>Delivery</span>
@@ -30,14 +27,14 @@ function Total(props) {
                 </p>
                 <p className="d-flex">
                     <span>Discount</span>
-                    <span>${ discount }</span>
+                    <span>${ (subTotal * 0.10).toFixed(2) }</span>
                 </p>
                 <p className="d-flex total-price">
                     <span>Total</span>
-                    <span>${ summTotal }</span>
+                    <span>${ (subTotal * 0.90).toFixed(2) }</span>
                 </p>
             </div>
-            <p><a href="checkout.html" className="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+            <p><Link to= { URL.CHECKOUT } className="btn btn-primary py-3 px-4">Proceed to Checkout</Link></p>
         </div>
     )
 }

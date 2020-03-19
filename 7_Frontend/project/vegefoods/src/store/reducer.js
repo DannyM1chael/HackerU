@@ -3,51 +3,42 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 import * as actions from './actions';
-import Product3 from '../scenes/components/assets/images/product-3.jpg';
-import Product4 from '../scenes/components/assets/images/product-4.jpg';
+import products from '../components/api/dataProducts';
+import clients from '../components/api/dataClients';
 
-const dataStub = [
-    {
-        id: 3,
-        img: {
-            small: Product3,
-            large: '',
-        },
-        title: 'Bell Pepper',
-        price: 4.90,
-        cnt: 1, 
-        total: 4.90,
-    },
-
-    {
-        id: 4,
-        img: {
-            small: Product4,
-            large: '',
-        },
-        title: 'Bell Pepper',
-        price: 15.70,
-        cnt: 1, 
-        total: 15.70,
-    }
-]
 const initialState = {
-    cart: dataStub,
+    home: products,
+    shop: products,
+    cart: [],
+    feedback: clients,
+    total: 0,
+    volume: 600
 }
 
 const rootReducer = createReducer({
     [actions.updateCart]: (state, payload) => ({ ...state, cart: payload }),
     [actions.updateCartCounter]: (state, payload) => { 
-    const filtered = state.cart.filter( item => item.id == payload.id);
-    if (!filtered.length || filtered.length > 1) {
-        return state;
-    }
-    filtered[0].cnt = payload.cnt;
+    const filtered = state.cart.filter( product => product.id === payload.id);
+    filtered[0].quantity = payload.quantity;
     return {
         ...state, 
         cart: [ ...state.cart ],
         };   
-    }
+    },
+    [actions.updateCartTotal]: (state) => {
+        const cartTotal = state.cart.reduce((total, product) => total + product.quantity, 0);
+        return {
+            ...state,
+            cart: [...state.cart],
+            total: cartTotal
+        }
+    },
+    [actions.deleteItemFromCart]: (state, payload) => {
+        const filtered = state.cart.filter( product => product.id !== payload.id);
+		return { 
+            ...state, 
+            cart: [...filtered] }
+	},
 }, initialState);
 
 export default history => combineReducers({
