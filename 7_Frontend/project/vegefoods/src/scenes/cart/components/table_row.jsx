@@ -2,7 +2,6 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 import Remove from './remove';
 import Counter from '../../../components/product_counter'
-import { useSelector } from 'react-redux';
 
 function Row({ id, image, title, price, quantity}) {
 
