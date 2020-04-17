@@ -14,6 +14,9 @@
         echo '<pre>';
         print_r($queryBuilder->select('Students', '*'));
         print_r($queryBuilder->delete('Students', 'id = 1'));
+        print_r($queryBuilder->insert('Students', ['F', 'L']));
+        print_r($queryBuilder->where('id', '1'));
+        print_r($queryBuilder->update('Students', ['F','L']));
         print_r($queryBuilder->getText());
         print_r($queryBuilder->execute());
         echo '</pre>';

@@ -28,16 +28,30 @@
             return $queryText;
         }
 
-        public function insert(){
-            
+        public function insert(string $table, array $data){
+            $queryText[] = 'INSERT INTO ' . $table;
+            $insertQueryFields = [];
+            $insertQueryValues = [];
+            foreach($data as $field => $value){
+                $insertQueryFields[] = $field;
+                $insertQueryValues[] = $value;
+            }
+            $queryText[] .= '(' . implode(',', $insertQueryFields) . ') VALUES (' . implode(',', $insertQueryValues) . ')';
+            return $queryText;
         }
         public function delete(string $table){
             $queryText[] = 'DELETE FROM ' . $table;
             return $queryText;
         }
 
-        public function update(){
-            
+        public function update(string $table, array $data){
+            $queryText[] = 'UPDATE ' . $table . ' SET ';
+            $updateData = [];
+            foreach($data as $field=>$value){
+                $updateData[] = $field . '=' . $this->$value; 
+            }
+            $queryText[] .= implode(',', $updateData);
+            return $queryText;
         }
 
         public function where($where = []){
@@ -45,7 +59,7 @@
             if(is_array($where) && !empty($where)){
                 $whereQuery = [];
                 foreach($where as $field=> $value){
-                    $whereQuery[] = $field . '=' . $value;
+                    $whereQuery[] = $field . '=' . $this->$value;
                 }
                 if(!empty($whereQuery)){
                     $queryText[] .= 'WHERE ' . implode('AND ', $whereQuery);
@@ -55,7 +69,6 @@
         }
 
         public function getText(){
-            echo 'getText';
         }
         public function execute(){
             echo $this->getText();
