@@ -4,14 +4,16 @@
     class Querybulder
     {   
         private $queryText = [];
+        private $result;
         protected $connection = null;
 
-        public function __construct($host, $user, $password, $db)
+        public function __construct($host, $user, $password, $db, $prefix = null)
         {
             $this->host = $host;
             $this->user = $user;
             $this->password = $password;
             $this->db = $db;
+            $this->prefix = (!is_null($prefix)) ? $prefix : '';
         }
 
         protected function getConnection(){
@@ -24,8 +26,8 @@
         public function select(string $table, $fields = '*'){
             $queryText[] = 'SELECT ';
             $queryText[] .= is_array($fields) ? implode(',', $fields) : $fields;
-            $queryText[] .= 'FROM ' . $table;
-            return $queryText;
+            $queryText[] .= ' FROM ' . $table;
+            return implode('', $queryText);
         }
 
         public function insert(string $table, array $data){
@@ -37,35 +39,31 @@
                 $insertQueryValues[] = $value;
             }
             $queryText[] .= '(' . implode(',', $insertQueryFields) . ') VALUES (' . implode(',', $insertQueryValues) . ')';
-            return $queryText;
+            return implode('', $queryText);
         }
         public function delete(string $table){
             $queryText[] = 'DELETE FROM ' . $table;
-            return $queryText;
+            return implode('', $queryText);
         }
 
         public function update(string $table, array $data){
             $queryText[] = 'UPDATE ' . $table . ' SET ';
             $updateData = [];
             foreach($data as $field=>$value){
-                $updateData[] = $field . '=' . $this->$value; 
+                $updateData[] = $field . '=' . $value; 
             }
             $queryText[] .= implode(',', $updateData);
-            return $queryText;
+            return implode('', $queryText);
         }
 
         public function where($where = []){
             $queryText[] = '';
-            if(is_array($where) && !empty($where)){
-                $whereQuery = [];
-                foreach($where as $field=> $value){
-                    $whereQuery[] = $field . '=' . $this->$value;
-                }
-                if(!empty($whereQuery)){
-                    $queryText[] .= 'WHERE ' . implode('AND ', $whereQuery);
-                }
+            $whereQuery = [];
+            foreach($where as $field=> $value){
+                $whereQuery[] = $field . '=' . $value;
             }
-            return $queryText;
+            $queryText[] .= 'WHERE ' . implode(',', $whereQuery);
+            return implode('', $queryText);
         }
 
         public function getText(){
