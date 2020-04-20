@@ -2,7 +2,6 @@
     
     class Querybulder
     {   
-        protected $getText = [];
         protected $values = [];
         protected $query = "";
         protected $connection = null;
@@ -20,6 +19,7 @@
             if($this->connection->connect_error){
                 echo "Failed connection" . $this->connection->connect_error; 
             }
+            echo "Success connection";
         }
 
         public function select(...$args){
@@ -111,9 +111,11 @@
         }
 
         public function getText(){
+            //вывести текст запроса
         }
 
         public function execute(){
-            $stmt = $this -> connection->prepare($this->query);
+            $stmt = $this -> getConnection()->prepare($this->query);
+            $stmt->execute($this->values());
         }
     }

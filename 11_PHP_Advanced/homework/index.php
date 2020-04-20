@@ -11,7 +11,6 @@
         include "config.php";
         $query = new Querybulder($host, $user, $password, $db);
 
-        $query->select("*")->from("Students")->where("id", "=", 1)->getText();
     ?>
 </body>
 </html>
