@@ -116,6 +116,6 @@
 
         public function execute(){
             $stmt = $this -> getConnection()->prepare($this->query);
-            $stmt->execute($this->values());
+            $stmt->execute($this->values);
         }
     }
