@@ -111,11 +111,11 @@
         }
 
         public function getText(){
-            //вывести текст запроса
+            echo $this->query . "<br>";
         }
 
         public function execute(){
-            $stmt = $this -> getConnection()->prepare($this->query);
-            $stmt->execute($this->values);
+            $result = $this -> getConnection()->prepare($this->query);
+            $result->execute($this->values);
         }
     }
