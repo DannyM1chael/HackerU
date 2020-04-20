@@ -6,23 +6,12 @@
     <title>Querybuilder</title>
 </head>
 <body>
-    <?php include "config.php"; ?>
     <?php 
         include_once "querybuilder.php";
-        $queryBuilder = new Querybulder($host, $user, $password, $db);
+        include "config.php";
+        $query = new Querybulder($host, $user, $password, $db);
 
-        print_r($queryBuilder->select('Students', '*'));
-        echo '<br>';
-        print_r($queryBuilder->delete('Students'));
-        echo '<br>';
-        print_r($queryBuilder->insert('Students', ['F', 'L']));
-        echo '<br>';
-        print_r($queryBuilder->where(['id', '1']));
-        echo '<br>';
-        print_r($queryBuilder->update('Students', ['F','L']));
-        echo '<br>';
-        // print_r($queryBuilder->getText());
-        // print_r($queryBuilder->execute());
+        $query->select("*")->from("Students")->where("id", "=", 1)->getText();
     ?>
 </body>
 </html>
