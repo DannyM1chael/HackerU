@@ -5,7 +5,7 @@ import BackAdImg from '../../../../components/assets/images/bg_3.jpg';
 const Countdown = () => {
 
 const calculateTimeleft = () => {
-    const difference = +new Date('2020-02-01') - +new Date();
+    const difference = +new Date('2020-05-01') - +new Date();
     let timeLeft = {};
 
     if (difference > 0 ) {
