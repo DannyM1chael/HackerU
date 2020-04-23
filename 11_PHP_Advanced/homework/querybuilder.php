@@ -4,22 +4,14 @@
     {   
         protected $values = [];
         protected $query = "";
-        protected $connection = null;
-
+        protected $connection;
+        
         public function __construct($host, $user, $password, $db)
         {
-            $this->host = $host;
-            $this->user = $user;
-            $this->password = $password;
-            $this->db = $db;
-        }
-
-        protected function getConnection(){
             $this->connection = new mysqli($this->host, $this->user, $this->password, $this->db);
             if($this->connection->connect_error){
-                echo "Failed connection" . $this->connection->connect_error; 
+                echo $this->connection->connect_error; 
             }
-            echo "Success connection";
         }
 
         public function select(...$args){
@@ -111,11 +103,11 @@
         }
 
         public function getText(){
-            echo $this->query . "<br>";
+            echo $this->query;
         }
 
         public function execute(){
-            $result = $this -> getConnection()->prepare($this->query);
+            $result = $this->connection->prepare($this->query);
             $result->execute($this->values);
         }
     }
