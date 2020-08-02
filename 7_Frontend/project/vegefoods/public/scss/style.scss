@@ -33,9 +33,6 @@ $color-4: #dcd691;
     transition:         all $transition ease;
 }
 
-html {
-	// overflow-x: hidden;
-}
 body {
 	font-family: $font-primary;
 	background: $white;
@@ -781,7 +778,6 @@ h1, h2, h3, h4, h5,
 		font-weight: 500;
 		font-size: 18px;
 		color: rgba(0,0,0,.5);
-		a{}
 	}
 }
 
@@ -1075,8 +1071,6 @@ h1, h2, h3, h4, h5,
 
 //CART
 .ftco-cart{
-	.input-group{
-	}
 	button{
 		i{
 			color: $primary;
@@ -1457,27 +1451,6 @@ textarea.form-control {
 	width: 100%;
 	display: block;
 }
-
-
-
-
-
-
-.about-author{
-	img{
-	}
-	.desc{
-		h3{
-			font-size: 24px;
-		}
-	}
-	.bio{
-
-	}
-}
-
-
-
 
 .ftco-section {
 	padding: 6em 0;
@@ -1921,10 +1894,6 @@ textarea.form-control {
 }
 .ftco-counter {
 	padding: 5em 0;
-	.icon{
-		span{
-		}
-	}
 	.text{
 		strong.number{
 			font-weight: 400;
@@ -2034,9 +2003,6 @@ textarea.form-control {
 				line-height: 1.5;
 				margin-bottom: 15px;
 			}
-			span{
-				// color: rgba($white, .7);
-			}
 			.icon, .text {
 				display: table-cell;
 				vertical-align: top;
@@ -2063,9 +2029,6 @@ textarea.form-control {
 			.one-third {
 				width: 50%;
 				background: $white;
-				&:first-child {
-					// padding-left: 0;
-				}
 				&:last-child {
 					border-right: none;
 					border-left: 1px solid rgba(0,0,0,.1);
@@ -2109,13 +2072,6 @@ textarea.form-control {
 				color: rgba($black,.7);
 				@include media-breakpoint-down(sm) {
 					right: 10px;
-				}
-			}
-			.textfield-search, .select-wrap {
-			}
-			.textfield-search {
-				input {
-
 				}
 			}
 			.select-wrap {
@@ -2181,7 +2137,6 @@ textarea.form-control {
 			a{
 				color: lighten($black,10%);
 			}
-			span{}
 		}
 	}
 	.info{
@@ -2197,8 +2152,6 @@ textarea.form-control {
 		outline: none!important;
 		box-shadow: none!important;
 		font-size: 15px;
-	}
-	#map {
 	}
 }
 
